@@ -92,6 +92,13 @@ export default function Home() {
         <JijiMascot mood={activeMood} size="lg" message={message} />
       </div>
 
+      {/* ── 2.5. Walking Progress ─────────────────────────── */}
+      <WalkingProgress
+        concept={todayCompleted.concept}
+        flash={todayCompleted.flash}
+        quiz={todayCompleted.quiz}
+      />
+
       {/* ── 3. Today's Study Cards ────────────────────────── */}
       <div className="flex flex-col gap-3">
         <StudyCard
@@ -237,5 +244,76 @@ function StudyCard({
         </div>
       </Link>
     </motion.div>
+  )
+}
+
+// ── Walking Progress sub-component ────────────────────────
+function WalkingProgress({
+  concept,
+  flash,
+  quiz,
+}: {
+  concept: boolean
+  flash: boolean
+  quiz: boolean
+}) {
+  const doneCount = [concept, flash, quiz].filter(Boolean).length
+  const pct = Math.round((doneCount / 3) * 100)
+  const labels = ['개념', '플래시', '퀴즈']
+  const doneFlags = [concept, flash, quiz]
+
+  return (
+    <div className="bg-white rounded-2xl shadow-sm p-4">
+      <div className="flex items-center justify-between mb-2">
+        <p className="text-sm font-semibold text-gray-700">오늘의 학습 진행</p>
+        <span className="text-xs font-bold text-[#c9956a]">{pct}%</span>
+      </div>
+
+      {/* Track */}
+      <div className="relative h-10 bg-[#f5ebe0] rounded-full overflow-hidden">
+        {/* Fill */}
+        <motion.div
+          className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#e8d5c0] to-[#c9956a] rounded-full"
+          initial={false}
+          animate={{ width: `${Math.max(pct, 8)}%` }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
+
+        {/* Walking mascot */}
+        <motion.img
+          src="/mascot/greeting.png"
+          alt="걸어가는 지지"
+          className="absolute top-0.5 h-9 w-9 object-contain"
+          style={{ imageRendering: 'pixelated' }}
+          initial={false}
+          animate={{
+            left: `calc(${Math.max(pct, 5)}% - 18px)`,
+            rotate: [0, -5, 5, -5, 0],
+          }}
+          transition={{
+            left: { duration: 0.8, ease: 'easeOut' },
+            rotate: { duration: 0.6, repeat: Infinity, repeatDelay: 0.5 },
+          }}
+          draggable={false}
+        />
+
+        {/* Goal flag */}
+        <span className="absolute right-2 top-1/2 -translate-y-1/2 text-lg">🏁</span>
+      </div>
+
+      {/* Checkmarks */}
+      <div className="flex justify-between mt-2 px-1">
+        {labels.map((label, i) => (
+          <span
+            key={label}
+            className={`text-[10px] font-medium ${
+              doneFlags[i] ? 'text-[#4CAF50]' : 'text-gray-300'
+            }`}
+          >
+            {doneFlags[i] ? '✅' : '⬜'} {label}
+          </span>
+        ))}
+      </div>
+    </div>
   )
 }

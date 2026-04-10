@@ -2133,5 +2133,167 @@
       "easeFactor": 2.5,
       "nextReview": "2026-04-10T19:00:07.137Z"
     }
+  },
+  {
+    "id": "fc-118",
+    "front": "시험 출제: 운동치료 중재과정에서 \"분석 및 사정\" 단계에 포함되는 것은?",
+    "back": "정보의 분석/통합, 해석, 문제목록 작성. 시험에서 빈칸으로 출제됨.",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "분석및사정"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-119",
+    "front": "시험 출제: 임상적 추론에서 \"클라이언트\"와 \"치료사\"를 헷갈리지 마라!",
+    "back": "\"클라이언트가 가진 가치와 목표에 관한 이해\"가 올바르다. \"치료사\"로 바꾸면 틀린 보기!",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "주어함정"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-120",
+    "front": "시험 출제: 임상적 추론 5가지를 나열하시오",
+    "back": "① 절차적 추론 ② 상호작용적 추론 ③ 조건적 추론 ④ 실용적 추론 ⑤ 서술적 추론. \"인과적 추론\"은 없다!",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "임상적추론"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-121",
+    "front": "시험 출제: 재활 FOR 빈칸 - \"사회적, 보조공학 장치\"",
+    "back": "재활 FOR = 신체적, 정신적, 사회적, 직업적, 경제적 기능 회복 + 보조공학 장치/환경수정",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "재활FOR"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-122",
+    "front": "시험 출제: 운동치료 효과 빈칸 - \"자세 안정성\"",
+    "back": "운동치료 효과: 신경근 조절능력, 균형능력, 자세 안정성, 신체협응능력",
+    "difficulty": "medium",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "치료효과"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-123",
+    "front": "시험 출제: 허파 혈전은 \"색전\" 요인이다!",
+    "back": "시험에서 혈전 요인과 출혈 요인 모두에서 \"허파 혈전\"이 답으로 나옴. 허파 혈전 = 색전 요인!",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "허파혈전"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-124",
+    "front": "시험 출제: Broca 손상에서 나타나지 않는 반응은?",
+    "back": "\"밥 먹었어요?\"에 \"나 좀 졸린데?\"처럼 이해 못하는 반응은 Wernicke 증상. Broca는 이해하지만 말을 못함.",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "Broca"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-125",
+    "front": "시험 출제: 균형검사 Good 등급 = ?",
+    "back": "동적 상태에서 바닥에 있는 물건을 집어 올리는 동안 자세 유지",
+    "difficulty": "hard",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "균형검사"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
+  },
+  {
+    "id": "fc-126",
+    "front": "시험 출제: Triceps brachii의 한글명과 기능",
+    "back": "위팔세갈래근. 팔꿈치 신전(extension) 담당. 시험에 영어로 출제됨!",
+    "difficulty": "medium",
+    "category": "족보 포인트",
+    "tags": [
+      "족보",
+      "Triceps"
+    ],
+    "chunkId": "exam",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:10:53.707Z"
+    }
   }
 ]
