@@ -35,8 +35,9 @@ export default function About() {
         <h1 className="text-3xl font-bold" style={{ color: '#8b6142' }}>
           지지
         </h1>
-        <p className="text-sm text-gray-500 mt-1">지영 지니어스 (GiYoung Genius)</p>
+        <p className="text-sm text-gray-500 mt-1">지영 지니어스 (JiYoung Genius)</p>
         <p className="text-xs text-[#c9956a] font-medium mt-2">작치의 예비 과탑이 될 여자 👑</p>
+        <p className="text-xs text-gray-400 mt-1">졍이만의 공부 창고</p>
       </div>
 
       {/* Divider */}

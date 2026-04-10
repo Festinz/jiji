@@ -841,5 +841,1297 @@
       "easeFactor": 2.5,
       "nextReview": "2026-04-10T18:48:40.872Z"
     }
+  },
+  {
+    "id": "fc-045",
+    "front": "임상적 추론(Clinical Reasoning)이란?",
+    "back": "환자의 문제를 체계적으로 해결하기 위한 사고 과정. 클라이언트의 문제목록, 과거 임상경험, 정보분석 능력, 의사결정 능력 등이 필요하다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "임상적추론",
+      "문제해결"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-046",
+    "front": "Top-down 접근법 vs Bottom-up 접근법의 차이는?",
+    "back": "Top-down: 작업수행부터 평가하여 원인을 찾는 방법. Bottom-up: 신체기능(근력, ROM 등)부터 평가하여 위로 올라가는 방법.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "평가",
+      "접근법"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-047",
+    "front": "생체역학 이론의 틀(Biomechanical FOR)의 주안점은?",
+    "back": "반복적인 활동을 통해 지구력을 증진시키고 근력을 강화시키는 것. 신체기능에 국한된 접근법이다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "생체역학",
+      "FOR"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-048",
+    "front": "감각운동 이론의 틀(Sensorimotor FOR)에 포함되는 치료법 4가지는?",
+    "back": "① 신경발달치료(NDT) ② 고유수용성 신경근 촉진(PNF) ③ Rood ④ Brunnstrom",
+    "difficulty": "hard",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "감각운동",
+      "NDT",
+      "PNF"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-049",
+    "front": "재활 이론의 틀(Rehabilitation FOR)의 핵심은?",
+    "back": "보상적 중재인 보조공학 장치 사용이나 환경수정을 통해 작업수행을 돕는 것. 실제 신체기능이 증가되지는 않는다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "재활",
+      "보조공학"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-050",
+    "front": "운동치료의 3가지 원리는?",
+    "back": "① 과부하의 원리: 일상 이상의 자극 필요 ② 특이성의 원리: 참여한 근육만 효과 ③ 가역성의 원리: 운동 중지 시 효과 감소",
+    "difficulty": "hard",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "과부하",
+      "특이성",
+      "가역성"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-051",
+    "front": "수동운동(Passive Exercise)이란?",
+    "back": "자신의 근육 수축 없이 치료사나 기구에 의해 수행되는 운동이다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "수동운동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-052",
+    "front": "능동보조운동(Active Assistive Exercise)이란?",
+    "back": "클라이언트의 능동적인 근육 수축이 나타날 때 치료사나 보조기구의 도움을 받아 실시하는 운동이다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "능동보조운동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-053",
+    "front": "저항운동(Resisted Exercise)이란?",
+    "back": "외력(external force)이나 중력에 대항하여 클라이언트 자신이 스스로 하는 수의적 운동이다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "저항운동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-054",
+    "front": "신장운동(Stretching Exercise)이란?",
+    "back": "치료사의 힘이나 기구를 이용해서 그 부위를 연장시키는 운동 방법이다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "신장운동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-055",
+    "front": "등척성 운동(Isometric)의 특징은?",
+    "back": "근육의 길이가 변하지 않는 상태에서 근력(힘)을 발생시키는 운동. 안정성(stability) 훈련에 해당한다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "등척성",
+      "isometric"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-056",
+    "front": "등장성 운동(Isotonic)의 특징은?",
+    "back": "근육의 길이가 변하면서 수행하는 운동. 가동성(mobility) 훈련에 해당한다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "등장성",
+      "isotonic"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-057",
+    "front": "등속성 운동(Isokinetic)의 특징은?",
+    "back": "일정한 속도로 관절 가동범위 전 범위에서 최대 저항을 제공하는 운동이다.",
+    "difficulty": "hard",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "등속성",
+      "isokinetic"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-058",
+    "front": "운동치료의 치료적 목적 7가지를 나열하시오",
+    "back": "① 관절가동범위 증진 ② 근육강화(근력) ③ 근지구력 증진 ④ 통증감소 ⑤ 관절의 구조적 회복 ⑥ 상하지 기능적 움직임 회복 ⑦ 일상생활수행능력 회복",
+    "difficulty": "hard",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "치료목적"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-059",
+    "front": "Power Web의 색상별 저항 순서는?",
+    "back": "노랑(가장 약함) → 초록 → 빨강 → 검정(가장 강함). 부하가 클수록 어두운 색이다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "PowerWeb",
+      "저항"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-060",
+    "front": "운동치료 시 능동보조운동과 능동운동 중 어느 것이 먼저 시작되는가?",
+    "back": "능동보조운동(Active Assistive Exercise)이 능동운동보다 먼저 시작된다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "tags": [
+      "운동순서"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-061",
+    "front": "뇌졸중의 정의는?",
+    "back": "뇌기능의 부분적 또는 전체적으로 급속히 발생한 장애가 상당기간 이상 지속되는 것으로, 뇌혈관의 병 이외에는 다른 원인을 찾을 수 없는 상태.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "뇌졸중",
+      "정의"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-062",
+    "front": "허혈성 뇌졸중(Ischemic Stroke)이란?",
+    "back": "뇌혈류 감소가 일정 시간 이상 지속되면 뇌조직이 괴사되어 회복불가능한 상태. 혈관이 막히는 것이 원인이다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "허혈성",
+      "뇌경색"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-063",
+    "front": "출혈성 뇌졸중의 가장 흔한 원인은?",
+    "back": "고혈압성 뇌출혈이다. 뇌동맥류와 뇌동정맥기형의 파열도 중요 원인이다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "출혈성",
+      "고혈압"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-064",
+    "front": "뇌졸중의 임상증상에서 편마비(Hemiplegia)의 전형적인 상지 패턴은?",
+    "back": "어깨: 내전·내회전, 팔꿈치: 굴곡, 손목·손가락: 굴곡. 전체적으로 안쪽으로 돌려지고 구부러진 자세.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "편마비",
+      "경직패턴"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-065",
+    "front": "뇌졸중의 전형적인 하지 경직 패턴은?",
+    "back": "고관절·무릎: 신전(extension), 발목: 내반(inversion), 발가락: 굴곡(flexion). 다리가 일자로 뻗는 형태.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "경직패턴",
+      "하지"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-066",
+    "front": "Broca 실어증과 Wernicke 실어증의 차이는?",
+    "back": "Broca(44영역, 운동): 말을 못하지만 이해할 수 있음. Wernicke(22영역, 감각): 말은 하지만 헛소리를 하며 이해하지 못함.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "실어증",
+      "Broca",
+      "Wernicke"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-067",
+    "front": "편측무시(Neglect)는 어느 쪽 편마비에서 더 흔한가?",
+    "back": "왼쪽 편마비(Lt. Hemiplegia)에서 75%로 더 흔하다. 우뇌 손상 시 발생.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "편측무시",
+      "neglect"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-068",
+    "front": "연합반응(Association Reaction)이란?",
+    "back": "한쪽 근육이 수축할 때 반대측 또는 같은 쪽의 안 쓰는 손도 저절로 같이 움직이는 현상. 뇌가 억제 신호를 보내는 시스템이 손상되어 발생.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "연합반응"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-069",
+    "front": "공동운동(Co-contraction)이란?",
+    "back": "주동근(Agonist)과 길항근(Antagonist)이 동시 수축하는 것. 편마비에서는 수축이 이완되지 않는 문제가 발생.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "공동운동",
+      "동시수축"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-070",
+    "front": "상호억제(Reciprocal Inhibition)란?",
+    "back": "한쪽 근육이 수축할 때 반대 근육은 이완하게 하는 뇌의 신호 시스템이다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "상호억제"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-071",
+    "front": "어깨관절 부분탈구(Subluxation)란?",
+    "back": "편마비 환자에서 어깨 근육 약화로 상완골이 관절와에서 부분적으로 빠지는 것. 어깨가 아래, 안쪽으로 빠진다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "아탈구",
+      "subluxation"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-072",
+    "front": "근긴장도 검사에서 경직(Spasticity) 등급은?",
+    "back": "G0: 정상, G1: 끝범위에서 spasticity, G1+: 50%에서 spasticity, G2: 전범위 spasticity, G3: 강직(Rigidity), G4: 구축(Contracture)",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "경직",
+      "등급"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-073",
+    "front": "침상자세 조절에서 바로 누운 자세(supine)의 목적은?",
+    "back": "경직 조절과 이완이 잘 되도록 하기 위함이다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "침상자세",
+      "supine"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-074",
+    "front": "교각운동(Bridging)이란?",
+    "back": "바로 누운 자세에서 무릎을 세우고 엉덩이를 들어올리는 운동. 초기 기능적 활동에 해당한다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "교각운동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-075",
+    "front": "휠체어 이동 시 기본 원칙은?",
+    "back": "축이 가까이 있어야 하며, 무조건 옮기는 쪽이 건측이다. 건강한 쪽으로 이동한다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "휠체어이동"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-076",
+    "front": "앉기에서 서기 훈련 시 주의점은?",
+    "back": "섬세하게 수행하며, 근긴장도의 상승 없이 진행해야 한다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "앉기서기"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-077",
+    "front": "손상 쪽 손에 체중지지 훈련 시 Locking이란?",
+    "back": "손을 뒤로 향하게 하면 수직방향으로 잠기면서(locking) 안정적이 된다.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "locking",
+      "체중지지"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-078",
+    "front": "뇌졸중 환자의 걷기 훈련에서 발목의 주요 문제는?",
+    "back": "발목은 대부분 내반(inversion)되거나 염증이 생기며, 무릎이 과신전될 수 있다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "걷기",
+      "발목"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-079",
+    "front": "뇌졸중의 골든타임을 놓치면 어떻게 되는가?",
+    "back": "중증 마비가 된다. 빠른 치료가 핵심이다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "골든타임"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-080",
+    "front": "모야모야병이란?",
+    "back": "뇌혈관이 점차 좁아지는 질환으로, 뇌졸중의 가족력과 관련이 있다.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "모야모야"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-081",
+    "front": "척수손상의 약 70%를 차지하는 원인은?",
+    "back": "외상성 손상이며, 그 중 교통사고가 50%로 가장 많다. 추락이 30%.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "tags": [
+      "외상성",
+      "교통사고"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-082",
+    "front": "팔다리마비(Tetraplegia)란?",
+    "back": "목신경 손상으로 인해 팔과 다리, 몸통의 조절 능력, 호흡기능이 부분적이거나 완전히 마비된 경우.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "tags": [
+      "사지마비",
+      "tetraplegia"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-083",
+    "front": "다리마비(Paraplegia)란?",
+    "back": "등신경, 허리신경, 엉치신경근의 손상으로 팔의 기능은 정상이나 몸통과 다리가 부분적이거나 완전히 마비된 경우.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "tags": [
+      "하지마비",
+      "paraplegia"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-084",
+    "front": "ASIA 분류에서 완전손상(Complete)이란?",
+    "back": "손상 수준 이하 레벨에서 감각(Sensory)과 운동(Motor) 모두 없는 상태(X, X).",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "ASIA",
+      "완전손상"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-085",
+    "front": "ASIA 분류에서 불완전손상(Incomplete)이란?",
+    "back": "손상 수준 이하에서 감각 O, 운동 X 또는 감각 O, 운동 O(근력 Fair 이하)인 상태.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "ASIA",
+      "불완전손상"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-086",
+    "front": "앞척수증후군(Anterior Cord Syndrome)의 특징은?",
+    "back": "목뼈 굽힘 손상으로 발생. 운동기능 소실, 통각·온도감각 소실. 고유수용성감각·진동감각(깊은감각)은 보존.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "앞척수증후군"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-087",
+    "front": "뒤척수증후군(Posterior Cord Syndrome)의 특징은?",
+    "back": "척수 뒤기둥 손상으로 깊은감각 기능 상실. 운동기능과 통각·온도감각은 보존. 바닥면 넓힌 보행(wide base gait) 나타남.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "뒤척수증후군"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-088",
+    "front": "브라운-세카르 증후군(Brown-Séquard)의 특징은?",
+    "back": "척수의 반쪽 손상. 같은쪽: 운동기능 + 깊은감각 손상. 반대쪽: 통각 + 온도감각 손상. 가쪽척수시상로가 교차하기 때문.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "브라운세카르"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-089",
+    "front": "중심척수증후군(Central Cord Syndrome)의 특징은?",
+    "back": "목뼈 젖힘(과신전) 손상으로 발생. 다리보다 팔에서 증상이 더 심함. 겉질척수로에서 안쪽이 팔, 가쪽이 다리 신경로이기 때문.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "중심척수증후군"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-090",
+    "front": "말총신경증후군(Cauda Equina Syndrome)의 특징은?",
+    "back": "말초신경이므로 재생 가능하나 완전 회복은 힘듦. 이완성 마비, 반사소실, 심한 위축을 나타냄.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "말총신경"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-091",
+    "front": "척수쇼크(Spinal Shock)란?",
+    "back": "척수손상 직후 일시적으로 모든 반사와 운동기능이 소실되는 상태. 쇼크 이후 움직이는 범위가 그 사람의 척수손상 레벨이 된다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "척수쇼크"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-092",
+    "front": "자율신경반사이상증(Autonomic Dysreflexia)이란?",
+    "back": "소변이 마렵거나 자극 시 혈압이 급상승하는 위험한 상태. T6 이상 손상에서 발생. 생명이 위태로울 수 있다.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "자율신경반사이상"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-093",
+    "front": "ASIA 상지 근력검사 5개 레벨의 key muscle은?",
+    "back": "① Biceps brachii(팔꿈치 굴곡) ② Triceps brachii(팔꿈치 신전) ③ Extensor carpi radialis(손목 신전) ④ Flexor digitorum(손가락 굴곡) ⑤ Finger abductor(손가락 외전)",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "ASIA",
+      "keyMuscle",
+      "상지"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-094",
+    "front": "ASIA 하지 근력검사 5개 레벨의 key muscle은?",
+    "back": "① Iliopsoas(고관절 굴곡) ② Quadriceps(무릎 신전) ③ Tibialis anterior(발목 배측굴곡) ④ Extensor hallucis longus(엄지발가락 신전) ⑤ Gastrocnemius(발목 저측굴곡)",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "ASIA",
+      "keyMuscle",
+      "하지"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-095",
+    "front": "척수손상 환자의 엎드린 자세가 위험한 이유는?",
+    "back": "가슴 압박으로 호흡이 어렵기 때문. 특히 목신경 손상 시 질식사 위험이 있다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "엎드린자세",
+      "호흡"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-096",
+    "front": "척수손상 환자의 휠체어 이동은 ASIA 몇 등급부터 가능한가?",
+    "back": "ASIA-B 부터 가능하다. 건강한 쪽으로 이동하며, 기어가거나 넘어지는 방법도 사용한다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "휠체어",
+      "ASIA"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-097",
+    "front": "T12 이하 척수손상 환자의 기능적 특징은?",
+    "back": "푸시업이 가능하고, 세워서 보행 훈련이 가능하다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "T12",
+      "보행"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-098",
+    "front": "이소성 골화증(Heterotopic Ossification)이란?",
+    "back": "척수손상 환자의 80%에서 나타나는 순환기 장애로, 관절 주변 연부조직에 비정상적으로 뼈가 형성되는 것.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "이소성골화"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-099",
+    "front": "척수손상에서 온도감각 장애의 특징은?",
+    "back": "따뜻한 것에 무뎌지고, 차가운 것에는 극도로 예민해진다. 전기장판 화상 위험이 있다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "온도감각"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-100",
+    "front": "운동재활에서 가장 빈도가 높은 환자 4가지는?",
+    "back": "① 뇌졸중(CVA) ② 척수손상(SCI) ③ 파킨슨 ④ 삼킴장애(Dysphagia)",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "tags": [
+      "빈도",
+      "질환"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-101",
+    "front": "SOAP Note에서 S, O, A, P는 각각 무엇인가?",
+    "back": "S: Subjective(주관적, 환자가 말한 내용), O: Objective(객관적 데이터), A: Assessment(평가/해석), P: Plan(치료계획)",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "SOAP"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-102",
+    "front": "SOAP Note의 Subjective에 포함되는 내용은?",
+    "back": "환자의 주진단명(Dx), Background history, CC(Chief Complaint, 주호소), 환자가 원하는 목표. 의학용어, 영어로 작성.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "SOAP",
+      "Subjective"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-103",
+    "front": "SOAP Note의 Plan에 포함되는 내용은?",
+    "back": "치료에 대한 구체적 서술, Self-training 포함. 과제명, 목적, 준비도구, 방법을 상세히 기술.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "SOAP",
+      "Plan"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-104",
+    "front": "Rotator Cuff(회전근개)란?",
+    "back": "어깨를 감싸는 4개의 근육 그룹으로, 편마비 환자에서 약화되면 아탈구(subluxation)가 발생한다.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "회전근개"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-105",
+    "front": "MMSE-K란?",
+    "back": "간이정신상태검사로, 인지기능을 평가하는 30점 만점 도구이다. 척수손상 환자에게는 인지손상이 없어 검사하지 않는다.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "MMSE",
+      "인지평가"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-106",
+    "front": "FIM과 K-MBI의 차이는?",
+    "back": "FIM: 기능적 독립성 측정(많이 쓰지 않음). K-MBI: 한국판 수정바델지수(ADL 평가에 많이 사용).",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "FIM",
+      "MBI",
+      "ADL"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-107",
+    "front": "SCIM은 어떤 환자에게 사용하는 평가도구인가?",
+    "back": "척수손상(SCI) 환자 전용 일상생활활동 평가도구이다.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "SCIM",
+      "SCI"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-108",
+    "front": "편마비 환자의 앉은 자세에서 나타나는 자세 이상은?",
+    "back": "전만(lordosis) 감소, 후만(kyphosis) 증가, 마비측 어깨 하방 전위(아탈구), 측만증(scoliosis), 골반 비대칭.",
+    "difficulty": "hard",
+    "category": "운동재활 기초",
+    "tags": [
+      "자세이상",
+      "편마비"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-109",
+    "front": "과제중심치료와 과제기반치료의 차이는?",
+    "back": "과제중심치료: 실제 과제를 직접 수행. 과제기반치료: 과제 수행에 필요한 요소를 분리하여 훈련.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "tags": [
+      "과제중심",
+      "과제기반"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-110",
+    "front": "Scapulohumeral rhythm(견갑상완리듬)이란?",
+    "back": "어깨 관절 움직임에서 상완골과 견갑골이 2:1 비율로 함께 움직이는 것. 60도 이후부터 견갑골이 벌어진다.",
+    "difficulty": "hard",
+    "category": "운동재활 기초",
+    "tags": [
+      "견갑상완리듬"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-111",
+    "front": "척수손상 중간고사는 몇 문제, 어떤 형식인가?",
+    "back": "9문제, 객관식 형식이다.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "tags": [
+      "시험정보"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-112",
+    "front": "척수원뿔(Conus Medullaris)과 말총(Cauda Equina)의 위치는?",
+    "back": "척수원뿔은 L1-L2 수준에서 척수의 끝부분이고, 말총은 그 아래 신경다발이다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "tags": [
+      "척수원뿔",
+      "말총"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-113",
+    "front": "뇌졸중에서 실행증(Apraxia)의 3가지 유형은?",
+    "back": "① Ideational(관념적): 행동 순서를 모름 ② Ideomotor(관념운동): 운동 계획을 못함 ③ Constructional(구성): 구조적 구성을 못함(퍼즐 등)",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "실행증",
+      "apraxia"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-114",
+    "front": "행위상실증(Apraxia)에서 구성적 실행증의 예시는?",
+    "back": "퍼즐을 맞추지 못하거나, 강의실에서 화장실을 찾지 못하는 것.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "구성적실행증"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-115",
+    "front": "뇌졸중의 시야결손과 편측무시의 차이는?",
+    "back": "시야결손: 실제로 시야의 일부가 보이지 않음. 편측무시: 시야는 정상이나 뇌가 한쪽을 무시함. 심해지면 Body Scheme 장애.",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "시야결손",
+      "편측무시"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-116",
+    "front": "삼킴장애(Dysphagia)란?",
+    "back": "뇌졸중 등으로 인한 연하곤란. 음식물을 삼키는 과정에 문제가 생기는 것.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "삼킴장애",
+      "dysphagia"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
+  },
+  {
+    "id": "fc-117",
+    "front": "척수손상에서 C7-8 레벨까지 영향을 미치는 합병증은?",
+    "back": "추진경(spasm)과 가래를 뱉지 못하는 호흡기 문제가 발생한다.",
+    "difficulty": "hard",
+    "category": "척수손상의 중재",
+    "tags": [
+      "호흡합병증"
+    ],
+    "chunkId": "manual",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T19:00:07.137Z"
+    }
   }
 ]
