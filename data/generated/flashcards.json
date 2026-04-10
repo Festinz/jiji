@@ -1,21 +1,21 @@
 [
   {
     "id": "fc-001",
-    "front": "작업치료사가 운동치료 중재를 제공하는 목적은?",
-    "back": "신체의 구조적 손상이나 질병으로 인해 작업수행에 어려움을 겪는 클라이언트들이 가능한 독립적으로 움직이고 다양한 활동에 적극적으로 참여할 수 있도록 도움을 제공",
+    "front": "작업치료사의 운동치료 중재에서 가장 기본적인 목적은?",
+    "back": "신체의 구조적 손상이나 질병으로 인해 작업수행에 어려움을 겪는 클라이언트들이 가능한 독립적으로 움직이고 다양한 활동에 적극적으로 참여할 수 있도록 도움을 제공하는 것",
     "difficulty": "easy",
     "category": "운동치료중재 개요",
     "tags": [
-      "작업치료",
-      "운동치료",
-      "목적"
+      "작업치료사",
+      "중재목적",
+      "독립성"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.619Z"
     }
   },
   {
@@ -26,80 +26,100 @@
     "category": "운동치료중재 과정",
     "tags": [
       "중재과정",
-      "6단계",
-      "순서"
+      "평가",
+      "목표설정"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.619Z"
     }
   },
   {
     "id": "fc-003",
     "front": "임상적 추론을 위해 필요한 핵심 요소 3가지는?",
-    "back": "클라이언트가 가진 문제목록에 대한 정보의 이해, 이전에 겪었던 과거의 임상 경험, 관련 정보를 분석할 수 있는 능력",
-    "difficulty": "medium",
+    "back": "1) 클라이언트가 가진 문제목록에 대한 정보의 이해 2) 이전에 겪었던 과거의 임상 경험 3) 관련 정보를 분석할 수 있는 능력",
+    "difficulty": "easy",
     "category": "임상적 추론",
     "tags": [
       "임상추론",
-      "핵심요소",
-      "문제해결"
+      "문제해결",
+      "분석능력"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.619Z"
     }
   },
   {
     "id": "fc-004",
-    "front": "생체역학 이론의 틀(Biomechanical FOR)의 주안점은?",
-    "back": "클라이언트에 대해 반복적인 활동을 통해 지구력을 증진시키고 근력을 강화시켜야 한다는 것에 주안점을 둠",
-    "difficulty": "easy",
+    "front": "생체역학 이론의 틀(Biomechanical FOR)의 주요 특징은?",
+    "back": "클라이언트에 대해 반복적인 활동을 통해 지구력을 증진시키고 근력을 강화시켜야 한다는 것에 주안점을 둔 접근법",
+    "difficulty": "medium",
     "category": "이론의 틀",
     "tags": [
       "생체역학",
-      "FOR",
-      "근력강화"
+      "근력강화",
+      "지구력"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.619Z"
     }
   },
   {
     "id": "fc-005",
-    "front": "감각운동 이론의 틀에 포함되는 접근법 4가지는?",
-    "back": "신경발달치료(NDT), 고유수용성 신경근 촉진(PNF), Rood, Brunnstrom과 같은 다양한 접근이 포함됨",
+    "front": "감각운동 이론의 틀에 포함되는 치료 접근법 4가지는?",
+    "back": "1) 신경발달치료(NDT) 2) 고유수용성 신경근 촉진(PNF) 3) Rood 4) Brunnstrom",
     "difficulty": "medium",
     "category": "이론의 틀",
     "tags": [
       "감각운동",
       "NDT",
       "PNF",
-      "접근법"
+      "신경치료"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.619Z"
     }
   },
   {
     "id": "fc-006",
-    "front": "운동치료의 정의는 무엇인가?",
-    "back": "질병이나 손상으로 인한 신경, 근육 또는 관절계의 비정상적인 기능을 정상 또는 정상에 가까운 상태로 회복, 증진시키거나 보다 나은 상태를 유지하기 위해 처방되는 신체의 운동",
+    "front": "재활 이론의 틀(Rehabilitation FOR)의 주요 특징은?",
+    "back": "보상적 중재인 보조공학 장치들을 사용하거나 환경수정을 함으로써 클라이언트의 신체기능을 향상시키고자 보상하여 작업수행을 돕는 수단으로 사용",
     "difficulty": "easy",
+    "category": "이론의 틀",
+    "tags": [
+      "재활",
+      "보상적중재",
+      "보조공학",
+      "환경수정"
+    ],
+    "chunkId": "ch01-c001",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T18:45:32.620Z"
+    }
+  },
+  {
+    "id": "fc-007",
+    "front": "운동치료의 정의를 완전히 설명하시오",
+    "back": "질병이나 손상으로 인한 신경, 근육 또는 관절계의 비정상적인 기능을 정상 또는 정상에 가까운 상태로 회복, 증진시키거나 보다 나은 상태를 유지하기 위해 처방되는 신체의 운동",
+    "difficulty": "medium",
     "category": "운동치료 정의",
     "tags": [
       "운동치료",
@@ -111,325 +131,365 @@
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
-    }
-  },
-  {
-    "id": "fc-007",
-    "front": "운동치료의 3가지 기본 원리를 설명하시오",
-    "back": "과부하의 원리: 일상적 부하 이상의 자극 필요, 특이성의 원리: 운동에 참여한 근육만 효과, 가역성의 원리: 운동 중지시 효과 감소",
-    "difficulty": "hard",
-    "category": "운동치료 원리",
-    "tags": [
-      "과부하",
-      "특이성",
-      "가역성",
-      "원리"
-    ],
-    "chunkId": "ch01-c001",
-    "sm2": {
-      "interval": 0,
-      "repetitions": 0,
-      "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-008",
-    "front": "운동치료의 목적 중 근육 관련 목적 2가지는?",
-    "back": "특정 근육 또는 근육군의 약화로 인한 비효율적인 동작을 제거하기 위한 운동, 근력의 불균형 예방을 위한 기능증진운동",
-    "difficulty": "medium",
-    "category": "운동치료 목적",
+    "front": "운동치료의 3가지 기본 원리는?",
+    "back": "1) 가역성의 원리: 운동이 중지되거나 부하가 이루어지지 않으면 운동의 효과가 감소 2) 과부하의 원리: 일상적으로 받는 운동 부하 이상의 자극이 주어져야 함 3) 특이성의 원리: 운동에 참여한 근육만 운동의 효과를 나타냄",
+    "difficulty": "hard",
+    "category": "운동치료 원리",
     "tags": [
-      "근육",
-      "목적",
-      "기능증진"
+      "가역성",
+      "과부하",
+      "특이성",
+      "운동원리"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-009",
-    "front": "운동치료의 치료적 목적 6가지를 나열하시오",
-    "back": "관절가동범위 증진, 근육강화(근력), 근지구력 증진, 통증 감소, 관절의 구조적 회복, 상하지의 기능적 움직임 회복, 일상생활수행능력 회복",
+    "front": "운동치료의 4가지 주요 목적을 설명하시오",
+    "back": "1) 정상적인 움직임에 대한 인식 발달 및 자동적 움직임 촉진 2) 특정 근육 약화로 인한 비효율적인 동작 제거 3) 기능증진운동을 통한 작업능력과 신체지구력 향상 4) 보조도구 사용을 위한 근력증진운동",
     "difficulty": "medium",
-    "category": "치료적 목적",
+    "category": "운동치료 목적",
     "tags": [
       "치료목적",
-      "기능회복",
-      "일상생활"
+      "움직임",
+      "기능증진",
+      "근력"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-010",
-    "front": "수동운동(passive exercise)의 정의는?",
-    "back": "자신의 근육 수축에 의하여 운동이 일어나지 않고, 치료사나 기구에 의해 수행되는 운동",
+    "front": "수동운동(passive exercise)과 능동보조운동(active assistive exercise)의 차이점은?",
+    "back": "수동운동: 자신의 근육 수축 없이 치료사나 기구에 의해 수행되는 운동 / 능동보조운동: 클라이언트의 능동적인 근육 수축이 나타날 때 치료사나 보조기구의 도움을 받아 실시하는 운동",
     "difficulty": "easy",
-    "category": "운동 종류",
+    "category": "운동 유형",
     "tags": [
       "수동운동",
-      "passive",
-      "치료사"
+      "능동보조운동",
+      "운동분류"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-011",
-    "front": "능동보조운동(active assistive exercise)과 능동운동(active exercise)의 차이점은?",
-    "back": "능동보조운동: 클라이언트의 능동적 근육 수축 시 치료사나 보조기구의 도움을 받음, 능동운동: 근육의 능동적인 수축에 의해서만 발생",
-    "difficulty": "medium",
-    "category": "운동 종류",
+    "front": "저항운동(resisted exercise)의 정의는?",
+    "back": "외력(external force)이나 중력에 대항하여 클라이언트 자신이 스스로 하는 수의적 운동",
+    "difficulty": "easy",
+    "category": "운동 유형",
     "tags": [
-      "능동운동",
-      "능동보조",
-      "차이점"
+      "저항운동",
+      "외력",
+      "수의적운동"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-012",
-    "front": "저항운동(resisted exercise)의 정의는?",
-    "back": "외력(external force)이나 중력에 대항하여 클라이언트 자신이 스스로 하는 수의적 운동",
-    "difficulty": "easy",
-    "category": "운동 종류",
+    "front": "운동치료 적용 시 클라이언트가 갖춰야 할 조건들은?",
+    "back": "1) 치료의 목적과 중재 방법, 지시사항 등을 이해해야 함 2) 관절가동성, 근수행력, 균형능력, 지구력, 신경근 조절, 협응 능력, 안정성 등을 향상시키기 위한 운동에 참여 가능해야 함 3) 적합한 움직임 및 감각피드백이 가능해야 함",
+    "difficulty": "medium",
+    "category": "운동치료 적용",
     "tags": [
-      "저항운동",
-      "외력",
-      "수의적"
+      "적용조건",
+      "클라이언트",
+      "참여",
+      "피드백"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.024Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-013",
-    "front": "운동치료 적용 시 클라이언트가 갖추어야 할 조건은?",
-    "back": "치료의 목적과 중재 방법, 지시사항 등을 이해해야 하며, 적합한 움직임 및 감각피드백이 가능해야 함",
-    "difficulty": "medium",
-    "category": "적용 조건",
+    "front": "운동치료의 7가지 치료적 목적을 나열하시오",
+    "back": "1) 관절가동범위 증진 2) 근육강화(근력) 3) 근지구력 증진 4) 통증 감소 5) 관절의 구조적 회복 6) 상·하지의 기능적 움직임 회복 7) 일상생활수행능력 회복",
+    "difficulty": "hard",
+    "category": "운동치료 목적",
     "tags": [
-      "클라이언트",
-      "조건",
-      "이해력"
+      "치료목적",
+      "관절가동범위",
+      "근력",
+      "기능회복"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.025Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-014",
-    "front": "클라이언트가 운동에 참여하기 위해 향상시켜야 할 능력들은?",
-    "back": "관절가동성, 근수행력, 균형능력, 지구력, 신경근 조절, 협응 능력, 안정성 등을 향상시키기 위한 운동에 참여 가능해야 함",
-    "difficulty": "hard",
-    "category": "필요 능력",
+    "front": "운동치료의 효과를 구조적 변화 측면에서 설명하시오",
+    "back": "심장근육의 강화와 뼈대근육의 강화가 일어나며, 이러한 변화를 통해 클라이언트가 가진 과제수행능력이 더욱 향상됨. 또한 신경근 조절능력, 균형능력, 자세 안정성, 신체 협응능력이 개선됨",
+    "difficulty": "medium",
+    "category": "운동치료 효과",
     "tags": [
-      "능력",
-      "관절가동성",
-      "균형",
-      "지구력"
+      "구조적변화",
+      "심장근육",
+      "뼈대근육",
+      "과제수행"
     ],
     "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:15:21.025Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-015",
-    "front": "SOAP note의 4가지 구성요소는?",
-    "back": "Subjective(주관적 정보 - 환자의 주 진단명, 병력)\nObjective(객관적 정보 - 작업치료 평가, 객관적 데이터)\nAssessment(평가 - 결과 도출, 치료계획 및 목표 설정)\nPlan(계획 - 구체적인 치료 서술, Self-training 포함)",
+    "front": "신장운동(stretching exercise)의 정의는?",
+    "back": "치료사의 힘이나 기구를 이용해서 그 부위를 연장시키는 운동방법",
     "difficulty": "easy",
-    "category": "SOAP note",
+    "category": "운동 유형",
     "tags": [
-      "SOAP",
-      "평가",
-      "기록"
+      "신장운동",
+      "스트레칭",
+      "연장"
     ],
-    "chunkId": "ch02-c002",
+    "chunkId": "ch01-c001",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.602Z"
+      "nextReview": "2026-04-10T18:45:32.620Z"
     }
   },
   {
     "id": "fc-016",
-    "front": "뇌졸중(Stroke)의 정의는?",
-    "back": "뇌기능의 부분적 또는 전체적으로 급속히 발생한 장애가 상당 기간 이상 지속되는 것\n뇌혈관의 병 이외에는 다른 원인을 찾을 수 없는 상태\n전조증상을 경험하며 치료 후에도 재발 가능성이 높음",
+    "front": "SOAP note의 네 가지 구성요소는?",
+    "back": "Subjective (주관적 정보), Objective (객관적 정보), Assessment (평가), Plan (계획)",
     "difficulty": "easy",
-    "category": "뇌졸중 개념",
+    "category": "SOAP note",
     "tags": [
-      "뇌졸중",
-      "정의",
-      "CVA"
+      "SOAP",
+      "의무기록",
+      "평가"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.602Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-017",
-    "front": "뇌졸중의 두 가지 주요 분류는?",
-    "back": "허혈성 뇌졸중(Infarction) - 뇌혈류 감소로 인한 뇌조직 괴사\n출혈성 뇌졸중(Hemorrhage) - 가장 흔한 원인은 고혈압성 뇌출혈\n뇌동맥류와 뇌동정맥기형 파열도 뇌출혈의 중요 원인",
-    "difficulty": "medium",
-    "category": "뇌졸중 분류",
+    "front": "SOAP note의 Subjective 항목에 포함되는 내용은?",
+    "back": "환자의 주 진단명, 병력(CVA, SCI 등), 주소(Chief Complaint)",
+    "difficulty": "easy",
+    "category": "SOAP note",
     "tags": [
-      "허혈성",
-      "출혈성",
-      "분류"
+      "주관적",
+      "병력",
+      "진단"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-018",
-    "front": "뇌졸중 환자의 전형적인 경직 패턴을 설명하시오",
-    "back": "상지: 어깨 내전/내회전, 팔꿈치 굽힘, 손목/손가락 굽힘\n하지: 고관절/무릎 폄, 발목 내번\n이러한 경직 패턴은 spasticity로 인해 발생하며 기능적 움직임을 제한함",
+    "front": "뇌졸중(stroke)의 정의는?",
+    "back": "뇌기능의 부분적 또는 전체적으로 급속히 발생한 장애가 상당 기간 이상 지속되는 것으로, 뇌혈관의 병 이외에는 다른 원인을 찾을 수 없는 상태",
     "difficulty": "medium",
-    "category": "뇌졸중 임상증상",
+    "category": "뇌졸중",
     "tags": [
-      "경직",
-      "spasticity",
-      "패턴"
+      "뇌졸중",
+      "정의",
+      "뇌혈관"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-019",
-    "front": "실조(Ataxia)는 어디 손상으로 발생하는가?",
-    "back": "소뇌(Cerebellum) 손상으로 발생\n협조 운동의 장애로 나타나며\n정확하고 부드러운 운동 수행이 어려워짐",
+    "front": "출혈성 뇌졸중의 가장 흔한 원인은?",
+    "back": "고혈압성 뇌출혈이 가장 흔한 원인이며, 뇌동맥류와 뇌동정맥기형의 파열도 중요한 원인",
     "difficulty": "easy",
-    "category": "뇌졸중 임상증상",
+    "category": "뇌졸중",
     "tags": [
-      "실조",
-      "소뇌",
-      "협조운동"
+      "출혈성",
+      "고혈압",
+      "뇌동맥류"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-020",
-    "front": "공동운동(Synergy)의 특징을 설명하시오",
-    "back": "작용근과 길항근의 동시 수축(Co-contraction) 발생\n상호억제(Reciprocal inhibition) 기전이 소실됨\n원시적인 운동패턴으로 정상적인 선택적 움직임이 어려움",
+    "front": "뇌졸중의 전형적인 경직성 자세 패턴을 설명하시오",
+    "back": "어깨: 내전/내회전/굴곡, 팔꿈치: 굴곡, 손목/손가락: 굴곡, 고관절/슬관절: 신전, 발목: 내번",
     "difficulty": "hard",
     "category": "뇌졸중 임상증상",
     "tags": [
-      "공동운동",
-      "synergy",
-      "co-contraction"
+      "경직",
+      "자세패턴",
+      "편마비"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-021",
-    "front": "연합반응(Associated Reaction)이란?",
-    "back": "한쪽 신체 부위의 의도적 움직임 시 다른 부위에 나타나는 비의도적 근수축\n뇌졸중 환자에서 흔히 관찰되는 현상\n기능적 움직임을 방해하는 요소로 작용함",
+    "front": "실조(ataxia)는 어느 부위의 손상과 관련있는가?",
+    "back": "소뇌(cerebellum) 손상과 관련되어 나타나는 운동조절 장애",
     "difficulty": "medium",
     "category": "뇌졸중 임상증상",
     "tags": [
-      "연합반응",
-      "비의도적",
-      "근수축"
+      "실조",
+      "소뇌",
+      "운동조절"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-022",
-    "front": "뇌졸중 평가에서 신경학적 검사 항목 4가지는?",
-    "back": "정신상태 검사\n감각 검사\n반사 검사\n근긴장도 검사",
-    "difficulty": "easy",
-    "category": "뇌졸중 평가",
+    "front": "행위상실증(apraxia)의 종류 3가지는?",
+    "back": "관념성 행위상실증(ideational), 관념운동성 행위상실증(ideomotor), 구성성 행위상실증(constructional)",
+    "difficulty": "hard",
+    "category": "뇌졸중 임상증상",
     "tags": [
-      "신경학적검사",
-      "평가",
-      "검사"
+      "행위상실증",
+      "apraxia",
+      "인지장애"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-023",
-    "front": "이학적 검사의 주요 항목들을 나열하시오",
-    "back": "관절가동범위 검사(ROM)\n도수근력 검사(MMT)\n균형 검사\n기능적 수준 검사",
+    "front": "Broca 실어증과 Wernicke 실어증의 특징은?",
+    "back": "Broca 실어증: 이해는 되지만 표현 어려움, Wernicke 실어증: 유창하지만 이해와 의미전달 어려움",
+    "difficulty": "medium",
+    "category": "뇌졸중 임상증상",
+    "tags": [
+      "실어증",
+      "Broca",
+      "Wernicke"
+    ],
+    "chunkId": "ch02-c002",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T18:47:12.674Z"
+    }
+  },
+  {
+    "id": "fc-024",
+    "front": "공동운동(synergy)과 연합반응(associated reaction)의 차이는?",
+    "back": "공동운동: 주동근과 길항근이 함께 수축하여 상반억제가 실패. 연합반응: 한쪽 팔다리 운동 시 반대편이나 다른 부위에 나타나는 비의도적 움직임",
+    "difficulty": "hard",
+    "category": "뇌졸중 임상증상",
+    "tags": [
+      "공동운동",
+      "연합반응",
+      "운동패턴"
+    ],
+    "chunkId": "ch02-c002",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T18:47:12.674Z"
+    }
+  },
+  {
+    "id": "fc-025",
+    "front": "뇌졸중 평가의 신경학적 검사 항목 4가지는?",
+    "back": "정신상태 검사, 감각 검사, 반사 검사, 근긴장도 검사",
+    "difficulty": "medium",
+    "category": "뇌졸중 평가",
+    "tags": [
+      "신경학적검사",
+      "평가",
+      "임상검사"
+    ],
+    "chunkId": "ch02-c002",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T18:47:12.674Z"
+    }
+  },
+  {
+    "id": "fc-026",
+    "front": "뇌졸중 이학적 검사 항목 4가지는?",
+    "back": "관절가동범위 검사, 도수근력 검사, 균형 검사, 기능적 수준 검사",
     "difficulty": "easy",
     "category": "뇌졸중 평가",
     "tags": [
       "이학적검사",
       "ROM",
-      "MMT",
       "균형"
     ],
     "chunkId": "ch02-c002",
@@ -437,151 +497,112 @@
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
-    }
-  },
-  {
-    "id": "fc-024",
-    "front": "뇌졸중 운동치료에서 침상 자세 조절의 중요성은?",
-    "back": "바로 누운 자세와 옆으로 누운 자세에서의 안정성 확보\n몸통 운동성 조절을 통한 기본적인 움직임 패턴 학습\n후속 기능적 활동의 기초가 되는 단계",
-    "difficulty": "medium",
-    "category": "뇌졸중 운동치료",
-    "tags": [
-      "침상자세",
-      "안정성",
-      "몸통조절"
-    ],
-    "chunkId": "ch02-c002",
-    "sm2": {
-      "interval": 0,
-      "repetitions": 0,
-      "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
-    }
-  },
-  {
-    "id": "fc-025",
-    "front": "교각운동(Bridging)의 치료적 목적은?",
-    "back": "골반과 하지의 안정성 향상\n몸통 근력 강화\n침상에서의 기본적인 움직임 패턴 학습\n후속 기능적 활동의 준비 단계",
-    "difficulty": "medium",
-    "category": "뇌졸중 운동치료",
-    "tags": [
-      "교각운동",
-      "bridging",
-      "골반안정성"
-    ],
-    "chunkId": "ch02-c002",
-    "sm2": {
-      "interval": 0,
-      "repetitions": 0,
-      "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.603Z"
-    }
-  },
-  {
-    "id": "fc-026",
-    "front": "뇌졸중 환자의 체중이동 훈련 방향은?",
-    "back": "가쪽 체중이동(Lateral weight shift)\n앞쪽 체중이동(Forward weight shift)\n점진적으로 운동성을 증가시키며 균형능력을 향상시킴",
-    "difficulty": "medium",
-    "category": "뇌졸중 운동치료",
-    "tags": [
-      "체중이동",
-      "균형",
-      "weight shift"
-    ],
-    "chunkId": "ch02-c002",
-    "sm2": {
-      "interval": 0,
-      "repetitions": 0,
-      "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.604Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-027",
-    "front": "팔 기능 향상을 위한 3가지 주요 조절 영역은?",
-    "back": "어깨뼈 조절(Scapular control) - 안정성 및 운동성\n팔 뻗기 조절(Reaching control) - 안정성, 운동성, 기능적 조절\n쥐기 조절(Grasping control) - 안정성 및 운동성 조절",
-    "difficulty": "hard",
+    "front": "뇌졸중 침상 자세 조절 훈련의 기본 자세 2가지는?",
+    "back": "바로 누운 자세(supine position)와 옆으로 누운 자세(side-lying position)에서의 자세 조절",
+    "difficulty": "easy",
     "category": "뇌졸중 운동치료",
     "tags": [
-      "팔기능",
-      "어깨뼈",
-      "팔뻗기",
-      "쥐기"
+      "침상훈련",
+      "자세조절",
+      "체위"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.604Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-028",
-    "front": "앉기에서 서기 훈련 시 치료사의 위치가 중요한 이유는?",
-    "back": "환자의 안전을 보장하고 적절한 지지 제공\n올바른 움직임 패턴 유도\n환자의 보상 동작을 최소화하고 정상적인 움직임 촉진",
+    "front": "뇌졸중 초기 기능적 활동 훈련 3가지는?",
+    "back": "교각운동(bridging), 어깨뼈 가동성 조절, 휠체어 이동 훈련",
     "difficulty": "medium",
     "category": "뇌졸중 운동치료",
     "tags": [
-      "서기훈련",
-      "치료사위치",
-      "안전"
+      "초기훈련",
+      "교각운동",
+      "휠체어"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.604Z"
+      "nextReview": "2026-04-10T18:47:12.674Z"
     }
   },
   {
     "id": "fc-029",
-    "front": "뇌졸중 환자에서 Gross motor와 Fine motor의 차이점은?",
-    "back": "Gross motor: 큰 근육군을 사용하는 대동작 기능\nFine motor: 작은 근육군을 사용하는 정교한 동작 기능\n뇌졸중 후 Fine motor가 더 늦게 회복되는 경향",
+    "front": "뇌졸중 환자의 팔 기능 향상을 위한 3가지 중재는?",
+    "back": "어깨뼈 조절(scapular control), 팔 뻗기 조절(reaching control), 쥐기 조절(grasping control)",
     "difficulty": "medium",
-    "category": "뇌졸중 운동기능",
+    "category": "뇌졸중 운동치료",
     "tags": [
-      "gross motor",
-      "fine motor",
-      "운동기능"
+      "팔기능",
+      "상지재활",
+      "기능훈련"
     ],
     "chunkId": "ch02-c002",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:17:00.604Z"
+      "nextReview": "2026-04-10T18:47:12.675Z"
     }
   },
   {
     "id": "fc-030",
-    "front": "뇌졸중 환자의 Genu recurvatum 해결을 위한 운동치료 방법은?",
-    "back": "Step box training, balance pad 사용, cane gait training을 통한 보행 훈련. 중립 자세 유지와 보장 길이, 보행 속도 개선에 집중.",
+    "front": "뇌졸중 회복기 균형훈련을 초기와 후기로 나누는 이유는?",
+    "back": "환자의 회복 단계에 따라 안정성 중심(초기)에서 동적 균형과 기능적 움직임(후기)으로 점진적 발전이 필요하기 때문",
+    "difficulty": "hard",
+    "category": "뇌졸중 운동치료",
+    "tags": [
+      "균형훈련",
+      "회복단계",
+      "점진적훈련"
+    ],
+    "chunkId": "ch02-c002",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-10T18:47:12.675Z"
+    }
+  },
+  {
+    "id": "fc-031",
+    "front": "뇌졸중 환자에서 Genu recurvatum의 정의는?",
+    "back": "무릎이 과신전되는 비정상적인 자세로, 보행 시 불안정성을 야기하는 주요 문제 중 하나입니다.",
     "difficulty": "easy",
     "category": "뇌졸중 운동치료",
     "tags": [
-      "genu_recurvatum",
-      "보행훈련",
-      "step_box"
+      "genu recurvatum",
+      "무릎과신전",
+      "보행"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
-    "id": "fc-031",
-    "front": "척수손상의 약 70%를 차지하는 원인과 가장 많은 비중을 차지하는 사고는?",
-    "back": "외상성 손상이 70%를 차지하며, 이 중 교통사고가 50%로 가장 많은 비중을 차지함.",
+    "id": "fc-032",
+    "front": "척수손상의 약 70%를 차지하는 손상 유형과 가장 많은 원인은?",
+    "back": "외상성 손상이 약 70%를 차지하며, 교통사고가 50%로 가장 많은 원인입니다.",
     "difficulty": "easy",
-    "category": "척수손상 개요",
+    "category": "척수손상",
     "tags": [
-      "외상성손상",
+      "외상성",
       "교통사고",
       "원인"
     ],
@@ -590,37 +611,37 @@
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
-    "id": "fc-032",
-    "front": "척수손상의 완전손상과 불완전손상의 정의를 설명하시오.",
-    "back": "완전손상: 가장 낮은 엉치분절에서 운동/감각기능이 모두 상실. 불완전손상: 신경학적 수준 이하에서 운동/감각기능의 일부가 보존된 상태.",
+    "id": "fc-033",
+    "front": "척수손상에서 완전손상과 불완전손상의 차이점은?",
+    "back": "완전손상은 가장 낮은 엉치분절에서 운동과 감각기능이 모두 상실된 상태이고, 불완전손상은 신경학적 수준 이하에서 운동이나 감각기능의 일부가 보존된 상태입니다.",
     "difficulty": "medium",
-    "category": "척수손상 분류",
+    "category": "척수손상",
     "tags": [
       "완전손상",
       "불완전손상",
-      "ASIA"
+      "분류"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
-    "id": "fc-033",
-    "front": "Tetraplegia(사지마비)와 Paraplegia(하반신마비)의 차이점은?",
-    "back": "Tetraplegia: 목신경손상으로 팔, 다리, 몸통 조절능력과 호흡기능 마비. Paraplegia: 등신경, 허리신경 손상으로 팔은 정상, 몸통과 다리 마비.",
+    "id": "fc-034",
+    "front": "팔다리마비(Tetraplegia)와 다리마비의 차이점은?",
+    "back": "팔다리마비는 목신경손상으로 팔과 다리, 몸통의 조절능력이 마비된 경우이고, 다리마비는 등신경, 허리신경, 엉치신경근 손상으로 팔 기능은 정상이나 몸통과 다리가 마비된 경우입니다.",
     "difficulty": "medium",
-    "category": "척수손상 분류",
+    "category": "척수손상",
     "tags": [
-      "tetraplegia",
-      "paraplegia",
+      "팔다리마비",
+      "다리마비",
       "기능적분류"
     ],
     "chunkId": "ch03-c005",
@@ -628,37 +649,37 @@
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
-    "id": "fc-034",
-    "front": "앞척수증후군(Anterior Cord Syndrome)의 특징적인 증상은?",
-    "back": "목뼈부위 굽힘손상으로 발생. 운동기능 소실(다리>팔), 통각·온도감각 소실. 고유수용성감각과 진동감각은 보존됨.",
+    "id": "fc-035",
+    "front": "앞척수증후군의 특징적인 증상은?",
+    "back": "운동기능 소실(팔보다 다리가 더 심함), 통각·온도감각 소실이 나타나지만, 고유수용성감각과 진동감각 등 깊은 심부감각은 보존됩니다.",
     "difficulty": "hard",
-    "category": "척수 불완전손상 증후군",
+    "category": "척수손상",
     "tags": [
-      "anterior_cord_syndrome",
-      "굽힘손상",
-      "감각보존"
+      "앞척수증후군",
+      "운동기능",
+      "감각기능"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
-    "id": "fc-035",
-    "front": "뒤척수증후군(Posterior Cord Syndrome)에서 나타나는 보행 특징은?",
-    "back": "깊은감각(고유수용성감각, 진동감각) 손상으로 인한 Wide base gait(바닥면 넓힌 보행)이 나타남. 운동기능과 통각·온도감각은 보존됨.",
+    "id": "fc-036",
+    "front": "뒤척수증후군에서 나타나는 특징적인 보행 양상은?",
+    "back": "깊은 감각의 손상으로 인해 바닥면 넓힌 보행(wide base gait)이 나타납니다. 운동기능과 통각·온도감각은 보존됩니다.",
     "difficulty": "medium",
-    "category": "척수 불완전손상 증후군",
+    "category": "척수손상",
     "tags": [
-      "posterior_cord_syndrome",
-      "wide_base_gait",
+      "뒤척수증후군",
+      "wide base gait",
       "깊은감각"
     ],
     "chunkId": "ch03-c005",
@@ -666,180 +687,159 @@
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
-    }
-  },
-  {
-    "id": "fc-036",
-    "front": "브라운-세카르 증후군의 특징적인 감각손상 패턴을 설명하시오.",
-    "back": "척수 반쪽 손상으로 같은 쪽의 운동기능과 깊은감각이 손상되고, 반대쪽의 통각과 온도감각이 손상됨. 가쪽척수시상로가 교차하기 때문.",
-    "difficulty": "hard",
-    "category": "척수 불완전손상 증후군",
-    "tags": [
-      "brown_sequard",
-      "교차신경로",
-      "반대편감각손상"
-    ],
-    "chunkId": "ch03-c005",
-    "sm2": {
-      "interval": 0,
-      "repetitions": 0,
-      "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-037",
-    "front": "중심척수증후군에서 팔의 손상이 다리보다 심한 이유는?",
-    "back": "목뼜부위 젖힘손상으로 발생. 겉질척수로의 배열에서 안쪽이 팔로 가는 신경로, 가쪽이 다리로 가는 신경로로 배열되어 있기 때문.",
+    "front": "브라운-세카르 증후군의 특징적인 감각 손상 패턴은?",
+    "back": "같은 쪽의 운동기능과 깊은 감각이 손상되고, 반대쪽의 통각과 온도감각이 손상되는 교차성 손상 패턴을 보입니다.",
     "difficulty": "hard",
-    "category": "척수 불완전손상 증후군",
+    "category": "척수손상",
     "tags": [
-      "central_cord_syndrome",
-      "겉질척수로",
-      "신경로배열"
+      "브라운세카르",
+      "교차성손상",
+      "반쪽손상"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-038",
-    "front": "말총신경증후군의 특징적인 임상 증상 3가지는?",
-    "back": "이완성 마비, 반사소실, 심한 위축을 나타냄. 다른 척수손상증후군과 달리 말초신경 손상으로 재생 가능하나 완전회복은 어려움.",
-    "difficulty": "medium",
-    "category": "척수 불완전손상 증후군",
+    "front": "중심척수증후군이 팔에서 더 심한 증상을 보이는 해부학적 이유는?",
+    "back": "겉질척수로의 배열에서 안쪽이 팔로 가는 신경로, 가쪽이 다리로 가는 신경로로 되어 있어 중앙부 손상 시 팔 부위가 더 영향을 받기 때문입니다.",
+    "difficulty": "hard",
+    "category": "척수손상",
     "tags": [
-      "cauda_equina",
-      "이완성마비",
-      "반사소실"
+      "중심척수증후군",
+      "겉질척수로",
+      "해부학적배열"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-039",
-    "front": "엉치신경보존(Sacral Sparing)이 중요한 이유는?",
-    "back": "척수 가장 중앙의 신경으로 항문주위 감각, 항문조임근 수축, 엉덩부위 감각을 지배. 이 신경 보존은 척수 불완전손상을 의미함.",
+    "front": "말총신경증후군이 다른 척수손상과 다른 특징은?",
+    "back": "해부학적으로 말초신경이므로 재생이 가능하며, 이완성 마비, 반사소실, 심한 위축을 나타냅니다.",
     "difficulty": "medium",
-    "category": "척수손상 평가",
+    "category": "척수손상",
     "tags": [
-      "sacral_sparing",
-      "불완전손상",
-      "예후평가"
+      "말총신경",
+      "이완성마비",
+      "말초신경"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-040",
-    "front": "척수손상 환자의 급성기와 아급성기 근력강화운동의 차이점은?",
-    "back": "급성기: 선택적 근력강화 위주. 아급성기: 다양한 도구를 사용한 근력강화운동 실시하여 기능적 활동 준비.",
-    "difficulty": "easy",
-    "category": "척수손상 운동치료",
+    "front": "엉치신경보존이 척수손상에서 갖는 의미는?",
+    "back": "척수의 가장 중앙에 있는 신경으로, 이 신경이 보존되면 척수의 불완전손상을 의미합니다. 항문주위 감각, 항문조임근 수축 등을 담당합니다.",
+    "difficulty": "medium",
+    "category": "척수손상",
     "tags": [
-      "근력강화",
-      "급성기",
-      "아급성기"
+      "엉치신경보존",
+      "불완전손상",
+      "중앙신경"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.669Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-041",
-    "front": "척수손상 환자의 휠체어 훈련에 포함되는 주요 기술들은?",
-    "back": "앞바퀴 들기(wheelie), 경사로 오르내리기, 휠체어-침상-자동차 이동훈련 등 일상생활 독립을 위한 기능적 기술들.",
+    "front": "뇌졸중 환자의 In hand manipulation 향상을 위한 목표는?",
+    "back": "손안에서 물체를 조작하는 능력을 향상시켜 grasp, pinch 기능을 개선하고 일상생활활동 수행 능력을 높이는 것입니다.",
     "difficulty": "easy",
-    "category": "척수손상 운동치료",
+    "category": "뇌졸중 운동치료",
     "tags": [
-      "휠체어훈련",
-      "wheelie",
-      "이동훈련"
+      "hand manipulation",
+      "grasp",
+      "pinch"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.670Z"
+      "nextReview": "2026-04-10T18:48:40.871Z"
     }
   },
   {
     "id": "fc-042",
-    "front": "척수손상 환자의 기능적 활동 중 '엉덩이 들기(push-up)' 훈련의 목적은?",
-    "back": "앉은 자세에서의 균형훈련과 체중 이동 능력 향상. 욕창 예방과 휠체어 이동 시 필요한 기본 기능 향상.",
-    "difficulty": "medium",
-    "category": "척수손상 운동치료",
+    "front": "척수손상 환자의 휠체어 훈련에서 앞바퀴 들기의 목적은?",
+    "back": "휠체어 조작 능력 향상과 장애물 극복, 경사로 이동 등의 기능적 활동을 위한 기본적인 휠체어 기술입니다.",
+    "difficulty": "easy",
+    "category": "척수손상",
     "tags": [
-      "push_up",
-      "균형훈련",
-      "욕창예방"
+      "휠체어훈련",
+      "앞바퀴들기",
+      "기능적활동"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.670Z"
+      "nextReview": "2026-04-10T18:48:40.872Z"
     }
   },
   {
     "id": "fc-043",
-    "front": "척수손상 환자에게 엎드린 자세(prone position)가 권장되지 않는 이유는?",
-    "back": "호흡 곤란 유발 가능성과 척추의 과신전으로 인한 2차 손상 위험. 특히 경수손상 환자에서 주의 필요.",
+    "front": "척수손상 환자에서 push-up 동작의 중요성은?",
+    "back": "앉은 자세에서의 균형훈련과 엉덩이 들기를 통해 체중 이동 능력을 향상시키고, 욕창 예방과 기능적 독립성을 높입니다.",
     "difficulty": "medium",
-    "category": "척수손상 운동치료",
+    "category": "척수손상",
     "tags": [
-      "prone_position",
-      "호흡곤란",
-      "2차손상"
+      "push-up",
+      "균형훈련",
+      "체중이동"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.670Z"
+      "nextReview": "2026-04-10T18:48:40.872Z"
     }
   },
   {
     "id": "fc-044",
-    "front": "척수손상의 간접손상 기전 4가지 유형을 나열하시오.",
-    "back": "굽힘 손상(flexion), 폄 손상(extension), 수직 압박 손상(vertical compression), 회전 손상(rotation)으로 구분됨.",
-    "difficulty": "easy",
-    "category": "척수손상 기전",
+    "front": "척수손상에서 엎드려 누운 자세(prone position)가 권장되지 않는 이유는?",
+    "back": "호흡 곤란을 야기할 수 있고, 경부 및 요추의 과도한 신전을 유발하여 관절 구축의 위험이 있기 때문입니다.",
+    "difficulty": "medium",
+    "category": "척수손상",
     "tags": [
-      "간접손상",
-      "굽힘",
-      "폄",
-      "압박",
-      "회전"
+      "엎드린자세",
+      "호흡곤란",
+      "관절구축"
     ],
     "chunkId": "ch03-c005",
     "sm2": {
       "interval": 0,
       "repetitions": 0,
       "easeFactor": 2.5,
-      "nextReview": "2026-04-10T18:18:35.670Z"
+      "nextReview": "2026-04-10T18:48:40.872Z"
     }
   }
 ]
