@@ -40,6 +40,8 @@ interface StudyState {
   updateCardProgress: (cardId: string, quality: number) => void
   recordQuizResult: (quizId: string, correct: boolean) => void
   completeConceptSet: (setId: string) => void
+  completeFlash: () => void
+  completeQuiz: () => void
   addXP: (amount: number) => void
   checkAndUpdateStreak: () => void
   resetToday: () => void
@@ -120,6 +122,16 @@ export const useStudyStore = create<StudyState>()(
           }
           return updated
         }),
+
+      completeFlash: () =>
+        set((s) => ({
+          todayCompleted: { ...s.todayCompleted, flash: true },
+        })),
+
+      completeQuiz: () =>
+        set((s) => ({
+          todayCompleted: { ...s.todayCompleted, quiz: true },
+        })),
 
       addXP: (amount) =>
         set((s) => {

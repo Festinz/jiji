@@ -27,6 +27,7 @@ export interface Quiz {
   category: string
   relatedCards: string[]
   chunkId: string
+  isExamPrediction?: boolean // 예상 시험 문제 표기
 }
 
 // ── Concept Card ─────────────────────────────────────────

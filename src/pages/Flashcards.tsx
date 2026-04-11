@@ -32,6 +32,7 @@ export default function Flashcards() {
   const daily = useDailyContent()
   const updateCardProgress = useStudyStore((s) => s.updateCardProgress)
   const addXP = useStudyStore((s) => s.addXP)
+  const completeFlash = useStudyStore((s) => s.completeFlash)
 
   const [deck, setDeck] = useState<FlashCard[] | null>(null)
   const [index, setIndex] = useState(0)
@@ -157,6 +158,7 @@ export default function Flashcards() {
 
     setTimeout(() => {
       if (index >= total - 1) {
+        if (!deck) completeFlash() // 오답 복습이 아닌 경우에만 완료 처리
         setFinished(true)
       } else {
         setIndex((i) => i + 1)

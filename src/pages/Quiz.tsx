@@ -22,6 +22,7 @@ export default function Quiz() {
   const daily = useDailyContent()
   const recordQuizResult = useStudyStore((s) => s.recordQuizResult)
   const addXP = useStudyStore((s) => s.addXP)
+  const completeQuiz = useStudyStore((s) => s.completeQuiz)
 
   const [quizSet, setQuizSet] = useState<QuizType[] | null>(null)
   const [index, setIndex] = useState(0)
@@ -184,6 +185,7 @@ export default function Quiz() {
       // All correct bonus
       const allCorrect = results.every((r) => r.correct)
       if (allCorrect) addXP(20)
+      if (!quizSet) completeQuiz() // 오답 복습이 아닌 경우에만 완료 처리
       setFinished(true)
       return
     }
@@ -217,6 +219,11 @@ export default function Quiz() {
 
       {/* ── 2. Question ───────────────────────────────────── */}
       <div className="relative mb-5">
+        {current.isExamPrediction && (
+          <span className="inline-block text-[10px] font-bold text-white bg-red-500 px-2 py-0.5 rounded-full mb-1.5">
+            🎯 예상 시험 문제
+          </span>
+        )}
         <p className="text-lg font-medium text-gray-800 leading-relaxed pr-16">
           {current.question}
         </p>

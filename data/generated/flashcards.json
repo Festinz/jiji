@@ -2295,5 +2295,309 @@
       "easeFactor": 2.5,
       "nextReview": "2026-04-10T19:10:53.707Z"
     }
+  },
+  {
+    "id": "fc-127",
+    "front": "절차적 추론 vs 상호작용적 추론의 차이는?",
+    "back": "절차적 추론: 진단명, 예후, 합병증, 평가와 중재를 중심으로 추론\n상호작용적 추론: 치료사와 클라이언트의 상호작용, 기본정보, 목표, 흥미, 가치를 중심으로 추론",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "임상적 추론",
+      "비교"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-128",
+    "front": "조건적 추론 vs 서술적 추론의 차이는?",
+    "back": "조건적 추론: 현재와 미래의 변화 상황을 통합, 어떤 미래를 준비할지\n서술적 추론: 변화된 작업수행의 의미, 이야기를 만들거나 말하게 하는 방법 사용",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "임상적 추론",
+      "비교"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-129",
+    "front": "실용적 추론에서 고려하는 요소는?",
+    "back": "중재환경의 요구, 치료사의 능력, 클라이언트의 사회·경제적 재원, 퇴원 후 환경 → 통합적으로 이해",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "임상적 추론"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-130",
+    "front": "뇌경색(뇌혈전)과 뇌출혈의 발병상황 차이는?",
+    "back": "뇌혈전: 안정 시에 많음, 단계적 진행\n뇌색전: 급발성, 일정하지 않음\n뇌출혈: 활동 시에 많음, 급격하게 발생",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "비교"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-131",
+    "front": "MAS(수정 애쉬위스 척도) 등급 1+ 의 특징은?",
+    "back": "잡으면 근긴장이 증가하고 운동범위의 중간 이상에서 적은 저항이 나타난다.",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "평가"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-132",
+    "front": "균형검사 등급: 정상(Normal) vs 우(Good)의 차이는?",
+    "back": "정상: 손 없이 안정적 자세유지(정적), 모든 방향 완전범위 체중이동(동적)\n우(Good): 손 없이 자세유지·약간 흔들림(정적), 바닥 물건 집기 중 자세유지(동적)",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "평가"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-133",
+    "front": "SOAP 노트의 각 항목은?",
+    "back": "S(Subjective): 환자의 주관적 호소, 배경정보\nO(Objective): 객관적 평가 데이터(MMSE, MFT, MBI 등)\nA(Assessment): 분석, 문제목록, 강점목록, 목표설정\nP(Plan): 구체적 치료 서술, 과제수행 설정",
+    "difficulty": "medium",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "SOAP"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-134",
+    "front": "브로카 실어증 vs 베르니케 실어증의 결정적 차이는?",
+    "back": "브로카: 말하기 힘듦(비유창), 전보식 문장, 타인 말 알아들음, 자신의 문제 인식(답답/우울)\n베르니케: 말 유창하나 의미없음, 이해 불가, 자신의 문제 인식 못함",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "실어증"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-135",
+    "front": "허파 혈전은 혈전 요인인가 색전 요인인가?",
+    "back": "허파 혈전은 색전(Embolism)에 의한 요인이다. 족보 16, 17번 모두 \"허파 혈전\"이 답이었음 — 혈전 요인에도, 출혈 요인에도 해당하지 않고, 색전에 의한 요인이다.",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "족보"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-136",
+    "front": "뇌졸중 환자의 회복기 기능적 활동 순서는?",
+    "back": "침상자세 조절 → 초기 기능적 활동(교각운동, 어깨뼈 가동성, 휠체어 이동) → 회복기 기능적 활동(일어나 앉기, 앉기 유지, 자세조절, 골반 기울기, 체중지지/이동, 균형, 서기, 걷기) → 팔 기능 향상",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "뇌졸중",
+      "재활순서"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-137",
+    "front": "등척성 운동이 금지되는 경우는?",
+    "back": "강한 등척성 수축은 척수내압상승 등의 문제가 야기되는 클라이언트에게 금지된다.",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "운동치료",
+      "금기"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-138",
+    "front": "DeLorme 방법 vs 단순근력강화 프로토콜의 측정 차이는?",
+    "back": "DeLorme 방법: 10 RM 측정\n단순근력강화프로토콜: 1 RM 측정",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "운동치료",
+      "저항운동"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-139",
+    "front": "ASIA 분류 A~E 각 등급의 의미는?",
+    "back": "A(완전손상): 감각·운동 전혀 없음\nB(불완전): 감각만 잔존\nC(불완전): 운동 잔존, 주요근육 1/2 이상 MMT 3단계 미만\nD(불완전): 주요근육 최소 1/2이 MMT 3단계 이상\nE(정상): 감각·운동 정상",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "척수손상",
+      "ASIA"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-140",
+    "front": "앞척수증후군 vs 뒤척수증후군 비교",
+    "back": "앞척수증후군: 운동소실, 통각·온도감각 소실, 깊은감각 보존\n뒤척수증후군: 깊은감각 소실, 운동·통각·온도감각 보존, 넓히 보행(wide base gait) 나타남",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "척수손상",
+      "비교"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-141",
+    "front": "브라운-세카르 증후군의 손상 패턴은?",
+    "back": "같은 쪽: 운동기능·깊은감각(고유수용성, 진동, 2점 식별) 손상\n반대쪽: 통각·온도감각 손상\n이유: 가쪽 척수시상로가 교차하기 때문",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "척수손상",
+      "증후군"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-142",
+    "front": "척수소크(Spinal Shock)란?",
+    "back": "척수손상 직후 상위중추와 척수의 연결이 갑자기 차단되어 손상부위 이하의 반사 소실, 이완성 마비, 자율신경마비(느린맥박, 혈압하강, 저체온증) 등 생리적 기능이 일시적으로 정지된 상태",
+    "difficulty": "hard",
+    "category": "예상 포인트",
+    "tags": [
+      "척수손상"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
+  },
+  {
+    "id": "fc-143",
+    "front": "가로막(횡격막) 신경지배 수준은?",
+    "back": "목뼈 C3, C4, C5 → \"C3, 4, 5 keeps the diaphragm alive\"",
+    "difficulty": "medium",
+    "category": "예상 포인트",
+    "tags": [
+      "척수손상",
+      "호흡"
+    ],
+    "chunkId": "exam-prediction",
+    "sm2": {
+      "interval": 0,
+      "repetitions": 0,
+      "easeFactor": 2.5,
+      "nextReview": "2026-04-11T00:27:03.770Z"
+    }
   }
 ]

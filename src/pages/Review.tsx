@@ -11,6 +11,7 @@ export default function Review() {
   const [allQuizzes, setAllQuizzes] = useState<Quiz[]>([])
   const [loading, setLoading] = useState(true)
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [examOnly, setExamOnly] = useState(false)
   const [expandedId, setExpandedId] = useState<string | null>(null)
 
   useEffect(() => {
@@ -39,9 +40,9 @@ export default function Review() {
     [wrongItems],
   )
 
-  const filtered = activeCategory
-    ? wrongItems.filter((w) => w.quiz.category === activeCategory)
-    : wrongItems
+  const filtered = wrongItems
+    .filter((w) => !activeCategory || w.quiz.category === activeCategory)
+    .filter((w) => !examOnly || w.quiz.isExamPrediction)
 
   // ── Empty / Loading ────────────────────────────────────
   if (loading) {
@@ -74,6 +75,16 @@ export default function Review() {
         </div>
         <span className="text-xs text-gray-400">{wrongItems.length}문제</span>
       </div>
+
+      {/* Exam prediction filter */}
+      <button
+        onClick={() => setExamOnly((v) => !v)}
+        className={`text-xs px-3 py-1.5 rounded-full transition-colors ${
+          examOnly ? 'bg-red-500 text-white' : 'bg-red-50 text-red-400'
+        }`}
+      >
+        🎯 예상 시험 문제만
+      </button>
 
       {/* Category filter */}
       {categories.length > 1 && (
@@ -111,9 +122,16 @@ export default function Review() {
                 className="w-full p-4 text-left"
               >
                 <div className="flex items-start justify-between gap-2">
-                  <p className="text-sm font-medium text-gray-800 flex-1">
-                    {quiz.question}
-                  </p>
+                  <div className="flex-1">
+                    {quiz.isExamPrediction && (
+                      <span className="inline-block text-[9px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded-full mb-1">
+                        🎯 예상 시험 문제
+                      </span>
+                    )}
+                    <p className="text-sm font-medium text-gray-800">
+                      {quiz.question}
+                    </p>
+                  </div>
                   <span className="text-gray-300 text-xs shrink-0 mt-0.5">
                     {isOpen ? '▲' : '▼'}
                   </span>
