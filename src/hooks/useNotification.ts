@@ -103,10 +103,31 @@ export function useNotification() {
 
   useEffect(() => {
     if (permission !== 'granted') return
-    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) return
+    if (!('serviceWorker' in navigator)) return
     // Only fire when transitioning from incomplete → complete
     if (allDone && !prevAllDone) {
-      navigator.serviceWorker.controller.postMessage({ type: 'DAILY_COMPLETE' })
+      // Use registration.showNotification directly (more reliable than postMessage)
+      const COMPLETION_MESSAGES = [
+        { title: '학습 완료! 🎉', body: '지영아 오늘 학습 다 끝냈어! 지지가 감동받았어~' },
+        { title: '오늘도 완벽! ✨', body: '지영아 역시 예비 과탑! 내일도 이 기세로!' },
+        { title: '올클리어! 🔥', body: '지영아 3개 다 클리어! 지지가 춤추고 있어~' },
+        { title: '미션 완료! 🏆', body: '지영아 오늘의 미션 끝! 쉬면서 맛있는 거 먹어~' },
+        { title: '대단해! 💪', body: '지영아 오늘도 해냈다! 작치 과탑 순항 중~' },
+        { title: '지지 감동 중! 🥹', body: '지영아 주말에도 공부하다니... 지지 눈물 날 것 같아' },
+        { title: '완벽한 하루! 🌟', body: '지영아 오늘 학습 마무리 완료! 푹 쉬어~ 내일도 화이팅!' },
+      ]
+      const dayIndex = Math.floor(Date.now() / 86400000) % COMPLETION_MESSAGES.length
+      const msg = COMPLETION_MESSAGES[dayIndex]
+
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.showNotification(msg.title, {
+          body: msg.body,
+          icon: '/icons/jiji-notif-192.png',
+          badge: '/icons/apple-touch-icon.png',
+          tag: 'jiji-daily-complete',
+          data: { url: '/' },
+        })
+      })
     }
     setPrevAllDone(allDone)
   }, [allDone, prevAllDone, permission])
