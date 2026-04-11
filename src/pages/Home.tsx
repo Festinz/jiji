@@ -56,8 +56,6 @@ const LEVEL_AVATAR_MAP: Record<number, AvatarKey> = {
 
 // ── Component ──────────────────────────────────────────────
 export default function Home() {
-  const totalXP = useStudyStore((s) => s.totalXP)
-  const streak = useStudyStore((s) => s.streak)
   const level = useStudyStore((s) => s.level)
   const selectedAvatar = useStudyStore((s) => s.selectedAvatar)
   const todayCompleted = useStudyStore((s) => s.todayCompleted)
@@ -118,16 +116,10 @@ export default function Home() {
       )}
 
       {/* ── 1. Header ─────────────────────────────────────── */}
-      <div className="flex items-center justify-between pt-1 relative z-10">
+      <div className="flex items-center pt-1 relative z-10">
         <Link to="/about" className="text-xl font-bold no-underline" style={{ color: '#8b6142' }}>
           지지
         </Link>
-        <div className="flex items-center gap-3 text-sm">
-          <span className="bg-orange-50 text-orange-500 font-semibold px-2.5 py-1 rounded-full">
-            🔥 {streak}일
-          </span>
-          <span className="text-gray-500 font-medium">{totalXP} XP</span>
-        </div>
       </div>
 
       {/* ── 2. Mascot ─────────────────────────────────────── */}

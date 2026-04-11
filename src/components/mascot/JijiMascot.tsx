@@ -229,7 +229,13 @@ export default function JijiMascot({
   let imgSrc: string
   let activeAnimation: TargetAndTransition
 
-  if (isFeedbackMood || isFireMood) {
+  if (isFireMood) {
+    // Daily rotation among 4 fire variants
+    const FIRE_VARIANTS = ['/mascot/blue.png', '/mascot/red.png', '/mascot/green.png', '/mascot/fire2.png']
+    const dayIndex = Math.floor(Date.now() / 86400000) % FIRE_VARIANTS.length
+    imgSrc = FIRE_VARIANTS[dayIndex]
+    activeAnimation = moodAnimations.fire
+  } else if (isFeedbackMood) {
     imgSrc = `/mascot/${mood}.png`
     activeAnimation = moodAnimations[mood]
   } else if (avatarOverride) {

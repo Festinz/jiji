@@ -97,45 +97,64 @@ export default function About() {
         )}
 
         {/* Notification status */}
-        {isPwaMode && (
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-gray-700">알림</p>
-              <p className="text-xs text-gray-400 mt-0.5">
-                {permission === 'granted'
-                  ? '알림 허용됨 ✅'
-                  : permission === 'denied'
-                    ? '알림 차단됨 ❌'
-                    : '알림 미설정'}
-              </p>
-            </div>
-            {permission === 'granted' ? (
-              <span className="text-xs bg-green-50 text-green-600 px-3 py-1.5 rounded-lg font-medium">
-                ON
-              </span>
-            ) : permission === 'denied' ? (
-              <div className="text-right">
-                <span className="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg font-medium">
-                  OFF
-                </span>
-                <p className="text-[10px] text-gray-400 mt-1">기기 설정에서 변경</p>
-              </div>
-            ) : (
-              <button
-                onClick={handleRequestNotification}
-                className="text-xs bg-[#c9956a] text-white px-3 py-1.5 rounded-lg font-medium"
-              >
-                허용하기
-              </button>
-            )}
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm text-gray-700">알림</p>
+            <p className="text-xs text-gray-400 mt-0.5">
+              {permission === 'granted'
+                ? '알림 허용됨 ✅'
+                : permission === 'denied'
+                  ? '알림 차단됨 ❌'
+                  : '알림 미설정'}
+            </p>
           </div>
-        )}
+          {permission === 'granted' ? (
+            <span className="text-xs bg-green-50 text-green-600 px-3 py-1.5 rounded-lg font-medium">
+              ON
+            </span>
+          ) : permission === 'denied' ? (
+            <div className="text-right">
+              <span className="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg font-medium">
+                OFF
+              </span>
+              <p className="text-[10px] text-gray-400 mt-1">기기 설정에서 변경</p>
+            </div>
+          ) : (
+            <button
+              onClick={handleRequestNotification}
+              className="text-xs bg-[#c9956a] text-white px-3 py-1.5 rounded-lg font-medium"
+            >
+              허용하기
+            </button>
+          )}
+        </div>
 
-        {isPwaMode && permission === 'granted' && (
+        {permission === 'granted' && (
           <div className="mt-3 pt-3 border-t border-gray-100">
             <p className="text-xs text-gray-400 leading-relaxed">
               매일 4번 알림: 오전 8시, 오후 1시, 오후 7시, 오후 11시
             </p>
+          </div>
+        )}
+
+        {/* 알림 안 올 때 안내 */}
+        {permission !== 'granted' && (
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <div className="bg-blue-50 rounded-xl p-3">
+              <p className="text-xs text-blue-700 font-medium mb-2">
+                알림이 안 오나요?
+              </p>
+              <p className="text-[11px] text-blue-600 leading-relaxed mb-2">
+                위의 "허용하기" 버튼을 눌러 알림을 설정해주세요.
+                {isIOSDevice && ' 홈 화면에 추가한 상태에서만 알림이 동작해요.'}
+              </p>
+              <button
+                onClick={handleRequestNotification}
+                className="w-full text-xs font-semibold text-white bg-[#5a8fc4] px-4 py-2 rounded-lg active:scale-95 transition-transform"
+              >
+                🔔 알림 설정하기
+              </button>
+            </div>
           </div>
         )}
       </div>
