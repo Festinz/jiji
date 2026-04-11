@@ -46,7 +46,13 @@ export default function Flashcards() {
   const [finished, setFinished] = useState(false)
   const animating = useRef(false)
 
-  const cards = deck ?? daily.flashcards
+  // Snapshot on first load so card progress updates don't reshuffle mid-session
+  const snapshotRef = useRef<FlashCard[] | null>(null)
+  if (!snapshotRef.current && !daily.loading && daily.flashcards.length > 0 && !deck) {
+    snapshotRef.current = [...daily.flashcards]
+  }
+
+  const cards = deck ?? snapshotRef.current ?? daily.flashcards
   const total = cards.length
   const current = cards[index] as FlashCard | undefined
   const next = cards[index + 1] as FlashCard | undefined

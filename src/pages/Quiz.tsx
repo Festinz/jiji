@@ -48,8 +48,13 @@ export default function Quiz() {
   const [showWrongOnly, setShowWrongOnly] = useState(false)
   const startTime = useRef(Date.now())
 
-  // Initialize quiz set on first render
-  const quizzes = quizSet ?? daily.quizzes
+  // Snapshot quiz set on first load so recordQuizResult doesn't reshuffle mid-session
+  const snapshotRef = useRef<QuizType[] | null>(null)
+  if (!snapshotRef.current && !daily.loading && daily.quizzes.length > 0 && !quizSet) {
+    snapshotRef.current = [...daily.quizzes]
+  }
+
+  const quizzes = quizSet ?? snapshotRef.current ?? daily.quizzes
   const total = quizzes.length
   const current = quizzes[index] as QuizType | undefined
 
