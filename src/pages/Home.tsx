@@ -82,9 +82,9 @@ export default function Home() {
   const isFireMode = allDone
   const { mood, message } = getGreeting(allDone, didStudyToday)
 
-  // Fire mode overrides everything
-  const fireMood: Mood = isFireMode ? 'fire' : (streak >= 3 && !allDone ? 'fire' : mood)
-  const fireMessage = isFireMode ? '오늘의 지지는 불타오르는 중! 🔥 작치 과탑 가즈아!' : message
+  // Fire mode: only when all daily tasks completed
+  const fireMood: Mood = isFireMode ? 'fire' : mood
+  const fireMessage = isFireMode ? '오늘의 지지는 불타오르는 중! 🔥' : message
 
   const levelProgress = getLevelProgress()
 
