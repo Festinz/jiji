@@ -183,7 +183,7 @@ function StatsTab() {
   return (
     <>
       <div className="flex items-center gap-2">
-        <JijiMascot mood="fire" size="sm" />
+        <StatsJiji />
         <h2 className="text-lg font-bold text-gray-800">학습 통계</h2>
       </div>
 
@@ -752,5 +752,21 @@ function ReviewCard({
         </div>
       </div>
     </div>
+  )
+}
+
+// ── Stats page mascot (daily rotation among 3 originals) ──
+const STATS_JIJI = ['/mascot/original.png', '/mascot/original2.png', '/mascot/original3.png']
+
+function StatsJiji() {
+  const dayIndex = Math.floor(Date.now() / 86400000) % STATS_JIJI.length
+  return (
+    <img
+      src={STATS_JIJI[dayIndex]}
+      alt="지지"
+      className="w-12 h-12 object-contain"
+      style={{ imageRendering: 'pixelated' }}
+      draggable={false}
+    />
   )
 }
