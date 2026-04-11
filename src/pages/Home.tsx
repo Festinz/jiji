@@ -514,6 +514,8 @@ function StudyCard({
 }
 
 // ── Walking Progress sub-component ────────────────────────
+const WALK_FRAMES = ['/mascot/walk_1.png', '/mascot/walk_2.png', '/mascot/walk_3.png']
+
 function WalkingProgress({
   concept,
   flash,
@@ -525,8 +527,21 @@ function WalkingProgress({
 }) {
   const doneCount = [concept, flash, quiz].filter(Boolean).length
   const pct = Math.round((doneCount / 3) * 100)
+  const allDone = pct === 100
   const labels = ['개념', '플래시', '퀴즈']
   const doneFlags = [concept, flash, quiz]
+
+  const [frameIndex, setFrameIndex] = useState(0)
+
+  useEffect(() => {
+    if (allDone) return
+    const interval = setInterval(() => {
+      setFrameIndex((prev) => (prev + 1) % WALK_FRAMES.length)
+    }, 300)
+    return () => clearInterval(interval)
+  }, [allDone])
+
+  const mascotSrc = allDone ? '/mascot/happy.png' : WALK_FRAMES[frameIndex]
 
   return (
     <div className="bg-white rounded-2xl shadow-sm p-4">
@@ -547,18 +562,16 @@ function WalkingProgress({
 
         {/* Walking mascot */}
         <motion.img
-          src="/mascot/greeting.png"
+          src={mascotSrc}
           alt="걸어가는 지지"
           className="absolute top-0.5 h-9 w-9 object-contain"
           style={{ imageRendering: 'pixelated' }}
           initial={false}
           animate={{
             left: `calc(${Math.max(pct, 5)}% - 18px)`,
-            rotate: [0, -5, 5, -5, 0],
           }}
           transition={{
             left: { duration: 0.8, ease: 'easeOut' },
-            rotate: { duration: 0.6, repeat: Infinity, repeatDelay: 0.5 },
           }}
           draggable={false}
         />

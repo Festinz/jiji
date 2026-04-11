@@ -97,6 +97,20 @@ export function useNotification() {
     sendStudyStateToSW()
   }, [permission, sendStudyStateToSW])
 
+  // ── Send completion notification when all 3 done ───────
+  const [prevAllDone, setPrevAllDone] = useState(false)
+  const allDone = todayCompleted.concept && todayCompleted.flash && todayCompleted.quiz
+
+  useEffect(() => {
+    if (permission !== 'granted') return
+    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) return
+    // Only fire when transitioning from incomplete → complete
+    if (allDone && !prevAllDone) {
+      navigator.serviceWorker.controller.postMessage({ type: 'DAILY_COMPLETE' })
+    }
+    setPrevAllDone(allDone)
+  }, [allDone, prevAllDone, permission])
+
   // ── Also schedule when SW becomes ready ─────────────────
   useEffect(() => {
     if (permission !== 'granted') return
