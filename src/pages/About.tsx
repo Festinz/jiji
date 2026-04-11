@@ -2,10 +2,17 @@ import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import JijiMascot from '../components/mascot/JijiMascot'
 import { useStudyStore } from '../stores/studyStore'
+import { useNotification } from '../hooks/useNotification'
 
 export default function About() {
-  const { xp, cardProgress, quizResults } = useStudyStore()
+  const { totalXP, cardProgress, quizResults } = useStudyStore()
   const [showResetModal, setShowResetModal] = useState(false)
+  const {
+    permission,
+    isPwaMode,
+    isIOSDevice,
+    requestPermission,
+  } = useNotification()
 
   const studyDays = useMemo(() => {
     const dates = new Set<string>()
@@ -22,7 +29,12 @@ export default function About() {
 
   const handleReset = () => {
     localStorage.removeItem('jiji-study')
+    localStorage.removeItem('jiji-review')
     window.location.reload()
+  }
+
+  const handleRequestNotification = async () => {
+    await requestPermission()
   }
 
   return (
@@ -47,7 +59,7 @@ export default function About() {
       <div className="grid grid-cols-3 gap-4 w-full max-w-[300px]">
         {[
           { label: '총 학습일', value: `${studyDays}일` },
-          { label: '총 XP', value: `${xp}` },
+          { label: '총 XP', value: `${totalXP}` },
           { label: '마스터 카드', value: `${masteredCount}장` },
         ].map((stat) => (
           <div key={stat.label} className="text-center">
@@ -59,6 +71,74 @@ export default function About() {
 
       {/* Divider */}
       <div className="w-16 h-px bg-gray-200" />
+
+      {/* ── Notification settings ──────────────────────────── */}
+      <div className="w-full max-w-[340px] bg-white rounded-2xl shadow-sm p-4">
+        <p className="text-sm font-semibold text-gray-700 mb-3">알림 설정</p>
+
+        {/* PWA mode check */}
+        {!isPwaMode && (
+          <div className="bg-amber-50 rounded-xl p-3 mb-3">
+            <p className="text-xs text-amber-700 font-medium mb-1">
+              알림을 받으려면 홈 화면에 추가해야 해요
+            </p>
+            {isIOSDevice ? (
+              <p className="text-[11px] text-amber-600 leading-relaxed">
+                Safari 하단{' '}
+                <span className="bg-amber-100 px-1 py-0.5 rounded text-[10px] font-mono">⎙</span>{' '}
+                공유 버튼 → "홈 화면에 추가"
+              </p>
+            ) : (
+              <p className="text-[11px] text-amber-600">
+                브라우저 메뉴 → "홈 화면에 추가"
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Notification status */}
+        {isPwaMode && (
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-gray-700">알림</p>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {permission === 'granted'
+                  ? '알림 허용됨 ✅'
+                  : permission === 'denied'
+                    ? '알림 차단됨 ❌'
+                    : '알림 미설정'}
+              </p>
+            </div>
+            {permission === 'granted' ? (
+              <span className="text-xs bg-green-50 text-green-600 px-3 py-1.5 rounded-lg font-medium">
+                ON
+              </span>
+            ) : permission === 'denied' ? (
+              <div className="text-right">
+                <span className="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg font-medium">
+                  OFF
+                </span>
+                <p className="text-[10px] text-gray-400 mt-1">기기 설정에서 변경</p>
+              </div>
+            ) : (
+              <button
+                onClick={handleRequestNotification}
+                className="text-xs bg-[#c9956a] text-white px-3 py-1.5 rounded-lg font-medium"
+              >
+                허용하기
+              </button>
+            )}
+          </div>
+        )}
+
+        {isPwaMode && permission === 'granted' && (
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <p className="text-xs text-gray-400 leading-relaxed">
+              매일 4번 알림: 오전 8시, 오후 1시, 오후 7시, 오후 11시
+            </p>
+          </div>
+        )}
+      </div>
 
       {/* Reset button */}
       <button

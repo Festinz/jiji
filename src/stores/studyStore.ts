@@ -14,6 +14,63 @@ interface TodayCompleted {
   quiz: boolean
 }
 
+export type AvatarKey = 'level_1' | 'level_2' | 'level_3' | 'level_4' | 'level_5' | 'health' | 'sleeping'
+
+export const LEVEL_THRESHOLDS = [
+  { level: 1, minXP: 0, avatar: 'level_1' as AvatarKey },
+  { level: 2, minXP: 65, avatar: 'level_2' as AvatarKey },
+  { level: 3, minXP: 200, avatar: 'level_3' as AvatarKey },
+  { level: 4, minXP: 400, avatar: 'level_4' as AvatarKey },
+  { level: 5, minXP: 650, avatar: 'level_5' as AvatarKey },
+  { level: 6, minXP: 1000, avatar: 'health' as AvatarKey },
+  { level: 7, minXP: 1300, avatar: 'sleeping' as AvatarKey },
+]
+
+export const AVATAR_NAMES: Record<AvatarKey, string> = {
+  level_1: '기본 지지',
+  level_2: '꽃단장 지지',
+  level_3: '원피스 지지',
+  level_4: '단화 지지',
+  level_5: '벚꽃 지지',
+  health: '만렙 지지 ✨',
+  sleeping: '잠자는 지지 💤',
+}
+
+export interface LevelProgress {
+  currentLevel: number
+  currentXP: number
+  nextLevelXP: number
+  progressPercent: number
+  isMaxLevel: boolean
+  isSpecial: boolean
+}
+
+interface LevelUpResult {
+  leveledUp: boolean
+  newLevel: number
+}
+
+function calculateLevel(totalXP: number): number {
+  let lv = 1
+  for (const t of LEVEL_THRESHOLDS) {
+    if (totalXP >= t.minXP) lv = t.level
+  }
+  return lv
+}
+
+function getUnlockedAvatars(level: number): AvatarKey[] {
+  return LEVEL_THRESHOLDS.filter((t) => t.level <= level).map((t) => t.avatar)
+}
+
+function getAvatarForLevel(level: number): AvatarKey {
+  const t = LEVEL_THRESHOLDS.find((t) => t.level === level)
+  return t ? t.avatar : 'level_1'
+}
+
+export function getAvatarImagePath(key: AvatarKey): string {
+  return `/mascot/${key}.png`
+}
+
 interface StudyState {
   // SM-2 카드 진행도
   cardProgress: Record<string, SM2State>
@@ -23,8 +80,12 @@ interface StudyState {
   completedSets: string[]
   // XP / 레벨
   xp: number
+  totalXP: number
   level: number
   totalAnswered: number
+  // 아바타 시스템
+  selectedAvatar: AvatarKey | null
+  unlockedAvatars: AvatarKey[]
   // 스트릭
   streak: number
   lastStudyDate: string | null // "YYYY-MM-DD"
@@ -42,9 +103,12 @@ interface StudyState {
   completeConceptSet: (setId: string) => void
   completeFlash: () => void
   completeQuiz: () => void
-  addXP: (amount: number) => void
+  addXP: (amount: number) => LevelUpResult
   checkAndUpdateStreak: () => void
   resetToday: () => void
+  getLevelProgress: () => LevelProgress
+  setSelectedAvatar: (avatarKey: AvatarKey | null) => void
+  getCurrentAvatar: () => AvatarKey
 }
 
 // ── Helpers ────────────────────────────────────────────────
@@ -84,8 +148,11 @@ export const useStudyStore = create<StudyState>()(
       quizResults: {},
       completedSets: [],
       xp: 0,
+      totalXP: 0,
       level: 1,
       totalAnswered: 0,
+      selectedAvatar: null,
+      unlockedAvatars: ['level_1'] as AvatarKey[],
       streak: 0,
       lastStudyDate: null,
       todayCompleted: { concept: false, flash: false, quiz: false },
@@ -133,31 +200,36 @@ export const useStudyStore = create<StudyState>()(
           todayCompleted: { ...s.todayCompleted, quiz: true },
         })),
 
-      addXP: (amount) =>
-        set((s) => {
-          const newXP = s.xp + amount
-          const xpForNext = s.level * 100
-          const levelUp = newXP >= xpForNext
-          const newState = {
-            xp: levelUp ? newXP - xpForNext : newXP,
-            level: levelUp ? s.level + 1 : s.level,
-          }
-          const badges = checkBadges({ ...s, ...newState })
-          return { ...newState, badges }
-        }),
+      addXP: (amount) => {
+        const s = get()
+        const newXP = s.xp + amount
+        const newTotalXP = s.totalXP + amount
+        const oldLevel = s.level
+        const newLevel = calculateLevel(newTotalXP)
+        const leveledUp = newLevel > oldLevel
+        const newUnlocked = getUnlockedAvatars(newLevel)
+
+        const newState = {
+          xp: newXP,
+          totalXP: newTotalXP,
+          level: newLevel,
+          unlockedAvatars: newUnlocked,
+        }
+        const badges = checkBadges({ ...s, ...newState })
+        set({ ...newState, badges })
+
+        return { leveledUp, newLevel }
+      },
 
       checkAndUpdateStreak: () => {
         const s = get()
         const today = todayStr()
 
-        // 이미 오늘 체크했으면 스킵
         if (s.lastStudyDate === today) return
 
-        // 어제 학습했으면 스트릭 유지, 아니면 리셋
         const yesterday = yesterdayStr()
         const newStreak = s.lastStudyDate === yesterday ? s.streak + 1 : 1
 
-        // 날짜가 바뀌었으면 todayCompleted 리셋
         set({
           streak: newStreak,
           lastStudyDate: today,
@@ -172,6 +244,44 @@ export const useStudyStore = create<StudyState>()(
           todayCompleted: { concept: false, flash: false, quiz: false },
           dailyCompleted: 0,
         }),
+
+      getLevelProgress: () => {
+        const s = get()
+        const currentLevel = s.level
+        const currentXP = s.totalXP
+        const isSpecial = currentLevel >= 7
+        const isMaxLevel = currentLevel >= 6
+
+        if (isSpecial) {
+          return { currentLevel, currentXP, nextLevelXP: 1300, progressPercent: 100, isMaxLevel: true, isSpecial: true }
+        }
+
+        const currentThreshold = LEVEL_THRESHOLDS.find((t) => t.level === currentLevel)!
+        const nextThreshold = LEVEL_THRESHOLDS.find((t) => t.level === currentLevel + 1)
+
+        if (!nextThreshold || isMaxLevel) {
+          const next = LEVEL_THRESHOLDS.find((t) => t.level === currentLevel + 1)
+          const nextXP = next ? next.minXP : currentThreshold.minXP
+          const range = nextXP - currentThreshold.minXP
+          const progress = range > 0 ? Math.min(100, Math.round(((currentXP - currentThreshold.minXP) / range) * 100)) : 100
+          return { currentLevel, currentXP, nextLevelXP: nextXP, progressPercent: progress, isMaxLevel, isSpecial: false }
+        }
+
+        const range = nextThreshold.minXP - currentThreshold.minXP
+        const progress = Math.min(100, Math.round(((currentXP - currentThreshold.minXP) / range) * 100))
+        return { currentLevel, currentXP, nextLevelXP: nextThreshold.minXP, progressPercent: progress, isMaxLevel: false, isSpecial: false }
+      },
+
+      setSelectedAvatar: (avatarKey) =>
+        set({ selectedAvatar: avatarKey }),
+
+      getCurrentAvatar: () => {
+        const s = get()
+        if (s.selectedAvatar && s.unlockedAvatars.includes(s.selectedAvatar)) {
+          return s.selectedAvatar
+        }
+        return getAvatarForLevel(s.level)
+      },
     }),
     { name: 'jiji-study' },
   ),

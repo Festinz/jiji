@@ -8,29 +8,14 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.ts',
       registerType: 'autoUpdate',
       includeAssets: ['mascot/*.png', 'icons/*.png', 'data/**/*.json'],
-      workbox: {
+      injectManifest: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2}'],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'cdn-fonts',
-              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /\/data\/generated\/.+\.json$/i,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'study-data',
-              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 30 },
-            },
-          },
-        ],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
       },
       manifest: {
         name: '지지 - 운동재활 학습',
@@ -54,6 +39,10 @@ export default defineConfig({
             purpose: 'any maskable',
           },
         ],
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module',
       },
     }),
   ],

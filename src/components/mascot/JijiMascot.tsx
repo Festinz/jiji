@@ -1,4 +1,6 @@
 import { motion, AnimatePresence, type TargetAndTransition } from 'framer-motion'
+import type { AvatarKey } from '../../stores/studyStore'
+import { getAvatarImagePath } from '../../stores/studyStore'
 
 export type Mood = 'greeting' | 'happy' | 'sad' | 'studying' | 'sleeping' | 'fire'
 
@@ -7,6 +9,9 @@ interface JijiMascotProps {
   size?: 'sm' | 'md' | 'lg'
   message?: string
   animate?: boolean
+  level?: number
+  avatarOverride?: AvatarKey | null
+  showLevelBadge?: boolean
 }
 
 const sizeMap = { sm: 48, md: 96, lg: 160 } as const
@@ -42,6 +47,44 @@ const moodAnimations: Record<Mood, TargetAndTransition> = {
   },
 }
 
+// Level-specific animations
+function getLevelAnimation(level: number): TargetAndTransition {
+  if (level <= 2) {
+    return moodAnimations.greeting
+  }
+  if (level <= 4) {
+    return {
+      rotate: [0, -8, 8, -8, 0],
+      y: [0, 0, 0, 0, 0, -8, 0],
+      transition: { duration: 3, repeat: Infinity, repeatDelay: 0.5 },
+    }
+  }
+  if (level === 5) {
+    return {
+      rotate: [0, -8, 8, -8, 0],
+      transition: { duration: 1.5, repeat: Infinity, repeatDelay: 1 },
+    }
+  }
+  if (level === 6) {
+    return {
+      rotate: [0, -8, 8, -8, 0],
+      transition: { duration: 1.5, repeat: Infinity, repeatDelay: 1 },
+    }
+  }
+  // level 7 (special / sleeping)
+  return moodAnimations.sleeping
+}
+
+const LEVEL_TO_AVATAR: Record<number, AvatarKey> = {
+  1: 'level_1',
+  2: 'level_2',
+  3: 'level_3',
+  4: 'level_4',
+  5: 'level_5',
+  6: 'health',
+  7: 'sleeping',
+}
+
 function ZzzBubbles() {
   return (
     <div className="absolute -top-6 -right-1 pointer-events-none">
@@ -66,6 +109,68 @@ function ZzzBubbles() {
   )
 }
 
+function CherryBlossomParticles() {
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full"
+          style={{
+            width: 6 + i * 2,
+            height: 6 + i * 2,
+            backgroundColor: '#f8b4c8',
+            left: `${15 + i * 18}%`,
+            top: -10,
+          }}
+          animate={{
+            y: [0, 120 + i * 20],
+            x: [0, (i % 2 === 0 ? 1 : -1) * (10 + i * 5)],
+            opacity: [0, 1, 1, 0],
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 2.5 + i * 0.3,
+            repeat: Infinity,
+            delay: i * 0.5,
+            ease: 'easeIn',
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
+function GoldSparkles() {
+  return (
+    <div className="absolute inset-0 pointer-events-none">
+      {[0, 1, 2].map((i) => (
+        <motion.span
+          key={i}
+          className="absolute text-amber-400 select-none"
+          style={{
+            fontSize: 12 + i * 2,
+            left: `${20 + i * 25}%`,
+            top: `${10 + i * 20}%`,
+          }}
+          animate={{
+            opacity: [0, 1, 0],
+            scale: [0.5, 1.2, 0.5],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            delay: i * 0.5,
+          }}
+        >
+          ✦
+        </motion.span>
+      ))}
+    </div>
+  )
+}
+
 function SpeechBubble({ message }: { message: string }) {
   return (
     <motion.div
@@ -81,13 +186,74 @@ function SpeechBubble({ message }: { message: string }) {
   )
 }
 
+function LevelBadge({ level }: { level: number }) {
+  let text: string
+  let bgColor: string
+
+  if (level >= 7) {
+    text = 'SP'
+    bgColor = '#7F77DD'
+  } else if (level >= 6) {
+    text = 'MAX'
+    bgColor = '#d4a820'
+  } else {
+    text = `LV.${level}`
+    bgColor = '#c9956a'
+  }
+
+  return (
+    <div
+      className="mt-1 px-2.5 py-0.5 rounded-full text-white text-[10px] font-bold"
+      style={{ backgroundColor: bgColor }}
+    >
+      {text}
+    </div>
+  )
+}
+
 export default function JijiMascot({
   mood,
   size = 'md',
   message,
   animate = true,
+  level,
+  avatarOverride,
+  showLevelBadge = false,
 }: JijiMascotProps) {
   const px = sizeMap[size]
+
+  // Determine image source (priority: mood feedback > avatarOverride > level > mood)
+  const isFeedbackMood = mood === 'happy' || mood === 'sad'
+  const isFireMood = mood === 'fire'
+
+  let imgSrc: string
+  let activeAnimation: TargetAndTransition
+
+  if (isFeedbackMood || isFireMood) {
+    imgSrc = `/mascot/${mood}.png`
+    activeAnimation = moodAnimations[mood]
+  } else if (avatarOverride) {
+    imgSrc = getAvatarImagePath(avatarOverride)
+    const avatarLevel = Object.entries(LEVEL_TO_AVATAR).find(([, v]) => v === avatarOverride)
+    activeAnimation = getLevelAnimation(avatarLevel ? Number(avatarLevel[0]) : 1)
+  } else if (level) {
+    const avatarKey = LEVEL_TO_AVATAR[level] ?? 'level_1'
+    imgSrc = getAvatarImagePath(avatarKey)
+    activeAnimation = getLevelAnimation(level)
+  } else {
+    imgSrc = `/mascot/${mood}.png`
+    activeAnimation = moodAnimations[mood]
+  }
+
+  const showSleepingEffects = (avatarOverride === 'sleeping' || (level === 7 && !avatarOverride)) && !isFeedbackMood && !isFireMood
+  const showCherryBlossoms = !isFeedbackMood && !isFireMood && (
+    avatarOverride === 'level_5' || (!avatarOverride && level === 5)
+  )
+  const showGoldSparkles = !isFeedbackMood && !isFireMood && (
+    avatarOverride === 'health' || (!avatarOverride && level === 6)
+  )
+
+  const displayLevel = level ?? 1
 
   return (
     <div className="relative inline-flex flex-col items-center">
@@ -97,18 +263,23 @@ export default function JijiMascot({
 
       <motion.div
         className="relative"
-        animate={animate ? moodAnimations[mood] : undefined}
+        animate={animate ? activeAnimation : undefined}
       >
+        {showCherryBlossoms && <CherryBlossomParticles />}
+        {showGoldSparkles && <GoldSparkles />}
+
         <img
-          src={`/mascot/${mood}.png`}
+          src={imgSrc}
           alt={`지지 - ${mood}`}
           width={px}
           height={px}
           style={{ imageRendering: 'pixelated' }}
           draggable={false}
         />
-        {mood === 'sleeping' && animate && <ZzzBubbles />}
+        {showSleepingEffects && animate && <ZzzBubbles />}
       </motion.div>
+
+      {showLevelBadge && <LevelBadge level={displayLevel} />}
     </div>
   )
 }

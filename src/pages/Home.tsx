@@ -1,9 +1,11 @@
-import { useMemo, useEffect } from 'react'
+import { useMemo, useEffect, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import JijiMascot from '../components/mascot/JijiMascot'
 import type { Mood } from '../components/mascot/JijiMascot'
-import { useStudyStore } from '../stores/studyStore'
+import AvatarSelector from '../components/mascot/AvatarSelector'
+import { useStudyStore, getAvatarImagePath, type AvatarKey } from '../stores/studyStore'
+import { useReviewStore } from '../stores/reviewStore'
 import { useDailyContent } from '../hooks/useDailyContent'
 import { quotes } from '../data/quotes'
 
@@ -46,16 +48,30 @@ function getDailyQuote() {
   return quotes[Math.abs(hash) % quotes.length]
 }
 
+// ── Level avatar mapping ──────────────────────────────────
+const LEVEL_AVATAR_MAP: Record<number, AvatarKey> = {
+  1: 'level_1', 2: 'level_2', 3: 'level_3', 4: 'level_4',
+  5: 'level_5', 6: 'health', 7: 'sleeping',
+}
+
 // ── Component ──────────────────────────────────────────────
 export default function Home() {
-  const xp = useStudyStore((s) => s.xp)
+  const totalXP = useStudyStore((s) => s.totalXP)
   const streak = useStudyStore((s) => s.streak)
+  const level = useStudyStore((s) => s.level)
+  const selectedAvatar = useStudyStore((s) => s.selectedAvatar)
   const todayCompleted = useStudyStore((s) => s.todayCompleted)
   const lastStudyDate = useStudyStore((s) => s.lastStudyDate)
   const quizResults = useStudyStore((s) => s.quizResults)
   const cardProgress = useStudyStore((s) => s.cardProgress)
   const checkAndUpdateStreak = useStudyStore((s) => s.checkAndUpdateStreak)
+  const getLevelProgress = useStudyStore((s) => s.getLevelProgress)
+  const reviewItemsAll = useReviewStore((s) => s.reviewItems)
+  const excludedItems = useReviewStore((s) => s.excludedItems)
+  const pendingReviewCount = reviewItemsAll.filter((r) => !excludedItems.includes(r.id)).length
   const daily = useDailyContent()
+
+  const [levelUpModal, setLevelUpModal] = useState<{ level: number } | null>(null)
 
   // Check streak on mount
   useEffect(() => { checkAndUpdateStreak() }, [checkAndUpdateStreak])
@@ -63,8 +79,14 @@ export default function Home() {
   const todayStr = new Date().toISOString().slice(0, 10)
   const didStudyToday = lastStudyDate === todayStr
   const allDone = todayCompleted.concept && todayCompleted.flash && todayCompleted.quiz
+  const isFireMode = allDone
   const { mood, message } = getGreeting(allDone, didStudyToday)
-  const activeMood: Mood = streak >= 3 && !allDone ? 'fire' : mood
+
+  // Fire mode overrides everything
+  const fireMood: Mood = isFireMode ? 'fire' : (streak >= 3 && !allDone ? 'fire' : mood)
+  const fireMessage = isFireMode ? '오늘의 지지는 불타오르는 중! 🔥 작치 과탑 가즈아!' : message
+
+  const levelProgress = getLevelProgress()
 
   const reviewCount = daily.flashcards.filter((fc) => cardProgress[fc.id]).length
   const newCount = daily.flashcards.length - reviewCount
@@ -72,10 +94,31 @@ export default function Home() {
   const quote = useMemo(getDailyQuote, [])
   const weekDates = useMemo(getWeekDates, [])
 
+  // Expose level-up trigger for child components (via window event)
+  const handleLevelUp = useCallback((newLevel: number) => {
+    setLevelUpModal({ level: newLevel })
+  }, [])
+
+  // Make handleLevelUp accessible
+  useEffect(() => {
+    (window as unknown as Record<string, unknown>).__jijiLevelUp = handleLevelUp
+    return () => { delete (window as unknown as Record<string, unknown>).__jijiLevelUp }
+  }, [handleLevelUp])
+
   return (
     <div className="flex flex-col gap-4">
+      {/* Fire mode background gradient */}
+      {isFireMode && (
+        <div
+          className="fixed inset-x-0 top-0 h-40 pointer-events-none z-0"
+          style={{
+            background: 'linear-gradient(to bottom, #fff5ee, #faf5ef00)',
+          }}
+        />
+      )}
+
       {/* ── 1. Header ─────────────────────────────────────── */}
-      <div className="flex items-center justify-between pt-1">
+      <div className="flex items-center justify-between pt-1 relative z-10">
         <Link to="/about" className="text-xl font-bold no-underline" style={{ color: '#8b6142' }}>
           지지
         </Link>
@@ -83,14 +126,30 @@ export default function Home() {
           <span className="bg-orange-50 text-orange-500 font-semibold px-2.5 py-1 rounded-full">
             🔥 {streak}일
           </span>
-          <span className="text-gray-500 font-medium">{xp} XP</span>
+          <span className="text-gray-500 font-medium">{totalXP} XP</span>
         </div>
       </div>
 
       {/* ── 2. Mascot ─────────────────────────────────────── */}
-      <div className="flex flex-col items-center py-2">
-        <JijiMascot mood={activeMood} size="lg" message={message} />
+      <div className="flex flex-col items-center py-2 relative">
+        <div className="relative">
+          <JijiMascot
+            mood={fireMood}
+            size="lg"
+            message={fireMessage}
+            level={level}
+            avatarOverride={isFireMode ? null : selectedAvatar}
+            showLevelBadge
+          />
+          <AvatarSelector />
+        </div>
       </div>
+
+      {/* ── 2.3. Level Progress ───────────────────────────── */}
+      <LevelProgressCard
+        levelProgress={levelProgress}
+        level={level}
+      />
 
       {/* ── 2.5. Walking Progress ─────────────────────────── */}
       <WalkingProgress
@@ -139,6 +198,27 @@ export default function Home() {
           xpReward={25}
         />
       </div>
+
+      {/* ── 3.5. Review reminder ──────────────────────────── */}
+      {pendingReviewCount > 0 && (
+        <motion.div whileTap={{ scale: 0.98 }}>
+          <Link
+            to="/stats?tab=review"
+            className="flex items-center gap-3 bg-white rounded-2xl shadow-sm p-4 no-underline"
+          >
+            <JijiMascot mood="studying" size="sm" />
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-gray-800">
+                📝 복습할 항목 {pendingReviewCount}개
+              </p>
+              <p className="text-xs text-gray-500 mt-0.5">
+                복습하면 기억에 오래 남아!
+              </p>
+            </div>
+            <span className="text-primary font-semibold text-sm shrink-0">보기 →</span>
+          </Link>
+        </motion.div>
+      )}
 
       {/* ── 4. Weekly Heatmap ─────────────────────────────── */}
       <div className="bg-white rounded-2xl shadow-sm p-4">
@@ -191,6 +271,192 @@ export default function Home() {
 
       {/* ── 6. Bottom spacing ─────────────────────────────── */}
       <div className="h-4" />
+
+      {/* ── Level Up Modal ────────────────────────────────── */}
+      <AnimatePresence>
+        {levelUpModal && (
+          <LevelUpOverlay
+            level={levelUpModal.level}
+            onClose={() => setLevelUpModal(null)}
+          />
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// ── Level Progress Card ───────────────────────────────────
+function LevelProgressCard({
+  levelProgress,
+  level,
+}: {
+  levelProgress: {
+    currentLevel: number
+    currentXP: number
+    nextLevelXP: number
+    progressPercent: number
+    isMaxLevel: boolean
+    isSpecial: boolean
+  }
+  level: number
+}) {
+  const avatarKey = LEVEL_AVATAR_MAP[level] ?? 'level_1'
+  const { isMaxLevel, isSpecial, progressPercent, currentXP, nextLevelXP } = levelProgress
+
+  let levelLabel: string
+  if (isSpecial) levelLabel = 'SP 지지'
+  else if (isMaxLevel) levelLabel = 'MAX LV. 지지 ✨'
+  else levelLabel = `LV.${level} 지지`
+
+  const barColor = isMaxLevel || isSpecial ? '#d4a820' : '#c9956a'
+
+  return (
+    <div className="bg-white rounded-2xl shadow-sm p-4">
+      <div className="flex items-center gap-3">
+        {/* Avatar icon */}
+        <img
+          src={getAvatarImagePath(avatarKey)}
+          alt="레벨 아이콘"
+          className="w-10 h-10 object-contain shrink-0"
+          style={{ imageRendering: 'pixelated' }}
+          draggable={false}
+        />
+
+        {/* Center: label + bar */}
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-medium text-gray-800 mb-1.5">{levelLabel}</p>
+          <div className="relative h-2 bg-[#e8d5c0] rounded-full overflow-hidden">
+            <motion.div
+              className="absolute inset-y-0 left-0 rounded-full"
+              style={{ backgroundColor: barColor }}
+              initial={false}
+              animate={{ width: `${Math.max(progressPercent, 4)}%` }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            />
+          </div>
+          {isMaxLevel && !isSpecial && (
+            <p className="text-[10px] text-amber-600 font-medium mt-1">만렙 달성!</p>
+          )}
+        </div>
+
+        {/* Right: XP display */}
+        <div className="text-sm text-gray-500 font-medium shrink-0">
+          {isMaxLevel && !isSpecial ? 'MAX' : isSpecial ? 'MAX' : `${currentXP}/${nextLevelXP} XP`}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ── Level Up Overlay ──────────────────────────────────────
+function LevelUpOverlay({ level, onClose }: { level: number; onClose: () => void }) {
+  const isSpecial = level >= 7
+  const isMax = level === 6
+  const avatarKey = LEVEL_AVATAR_MAP[level] ?? 'level_1'
+
+  let bgStyle: React.CSSProperties
+  let title: string
+  let subtitle: string
+
+  if (isSpecial) {
+    bgStyle = { background: 'radial-gradient(circle, #7F77DD33 0%, transparent 70%)' }
+    title = '🌟 스페셜 달성! 잠자는 지지가 해금되었어!'
+    subtitle = '숨겨진 아바타를 만나보세요!'
+  } else if (isMax) {
+    bgStyle = { background: 'radial-gradient(circle, #d4a82033 0%, transparent 70%)' }
+    title = '🏆 만렙 달성! 지지가 최종 진화했어!'
+    subtitle = '아바타 선택이 해금되었습니다!'
+  } else {
+    bgStyle = { background: 'radial-gradient(circle, #c9956a22 0%, transparent 70%)' }
+    title = `🎉 레벨 업! LV.${level} 달성!`
+    subtitle = '새로운 모습의 지지를 만나보세요!'
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: [0, 1.2, 1], opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+        transition={{ type: 'spring', damping: 12, stiffness: 200 }}
+        className="bg-white rounded-3xl p-6 mx-6 max-w-sm w-full text-center shadow-xl relative overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Background effect */}
+        <div className="absolute inset-0" style={bgStyle} />
+
+        {/* Confetti */}
+        <Confetti />
+
+        <div className="relative z-10">
+          <img
+            src={getAvatarImagePath(avatarKey)}
+            alt="새 레벨 지지"
+            className="w-40 h-40 mx-auto object-contain mb-4"
+            style={{ imageRendering: 'pixelated' }}
+            draggable={false}
+          />
+
+          <h2 className="text-lg font-bold text-gray-800 mb-1">{title}</h2>
+          <p className="text-sm text-gray-500 mb-5">{subtitle}</p>
+
+          <button
+            onClick={onClose}
+            className="w-full py-3 rounded-2xl font-semibold text-white text-sm"
+            style={{ backgroundColor: isSpecial ? '#7F77DD' : isMax ? '#d4a820' : '#c9956a' }}
+          >
+            확인
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+// ── Confetti animation ────────────────────────────────────
+function Confetti() {
+  const colors = ['#c9956a', '#5a8fc4', '#4CAF50', '#ef5350', '#d4a820', '#7F77DD', '#f8b4c8']
+  const pieces = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    color: colors[i % colors.length],
+    delay: Math.random() * 0.5,
+    duration: 1.5 + Math.random(),
+    size: 4 + Math.random() * 6,
+  }))
+
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      {pieces.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute rounded-sm"
+          style={{
+            width: p.size,
+            height: p.size,
+            backgroundColor: p.color,
+            left: `${p.x}%`,
+            top: -10,
+          }}
+          animate={{
+            y: [0, 400],
+            x: [0, (Math.random() - 0.5) * 80],
+            rotate: [0, 360 * (Math.random() > 0.5 ? 1 : -1)],
+            opacity: [1, 1, 0],
+          }}
+          transition={{
+            duration: p.duration,
+            delay: p.delay,
+            ease: 'easeIn',
+          }}
+        />
+      ))}
     </div>
   )
 }

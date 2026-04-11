@@ -8,7 +8,7 @@ interface WrongFeedbackProps {
 
 export default function WrongFeedback({ onDone }: WrongFeedbackProps) {
   useEffect(() => {
-    const timer = setTimeout(onDone, 1500)
+    const timer = setTimeout(onDone, 1000)
     return () => clearTimeout(timer)
   }, [onDone])
 

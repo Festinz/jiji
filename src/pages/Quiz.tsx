@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import JijiMascot from '../components/mascot/JijiMascot'
 import type { Mood } from '../components/mascot/JijiMascot'
+import CorrectFeedback from '../components/feedback/CorrectFeedback'
+import WrongFeedback from '../components/feedback/WrongFeedback'
 import { useStudyStore } from '../stores/studyStore'
 import { useDailyContent } from '../hooks/useDailyContent'
 import type { Quiz as QuizType } from '../data/types'
@@ -16,6 +18,17 @@ function getResultMood(pct: number): { mood: Mood; message: string } {
   return { mood: 'sad', message: '괜찮아, 다시 하면 돼!' }
 }
 
+// ── Helper: get correct answer text ────────────────────────
+function getCorrectAnswerText(quiz: QuizType): string {
+  if (quiz.type === 'true_false') {
+    return quiz.answer === true ? 'O' : 'X'
+  }
+  if (quiz.options && typeof quiz.answer === 'number') {
+    return quiz.options[quiz.answer] ?? ''
+  }
+  return ''
+}
+
 // ── Main Component ─────────────────────────────────────────
 export default function Quiz() {
   const navigate = useNavigate()
@@ -26,8 +39,10 @@ export default function Quiz() {
 
   const [quizSet, setQuizSet] = useState<QuizType[] | null>(null)
   const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<number | boolean | null>(null)
+  const [selectedAnswer, setSelectedAnswer] = useState<number | boolean | null>(null)
+  const [isAnswered, setIsAnswered] = useState(false)
   const [showExplanation, setShowExplanation] = useState(false)
+  const [showFeedback, setShowFeedback] = useState<'correct' | 'wrong' | null>(null)
   const [results, setResults] = useState<{ quiz: QuizType; correct: boolean }[]>([])
   const [finished, setFinished] = useState(false)
   const [showWrongOnly, setShowWrongOnly] = useState(false)
@@ -113,6 +128,9 @@ export default function Quiz() {
                     {wrongOnes.map(({ quiz }, i) => (
                       <div key={i} className="text-sm">
                         <p className="font-medium text-gray-700">{quiz.question}</p>
+                        <p className="text-green-600 text-xs mt-0.5">
+                          정답: {getCorrectAnswerText(quiz)}
+                        </p>
                         <p className="text-gray-500 text-xs mt-1">
                           💡 {quiz.explanation}
                         </p>
@@ -132,8 +150,10 @@ export default function Quiz() {
               onClick={() => {
                 setQuizSet(wrongOnes.map((r) => r.quiz))
                 setIndex(0)
-                setSelected(null)
+                setSelectedAnswer(null)
+                setIsAnswered(false)
                 setShowExplanation(false)
+                setShowFeedback(null)
                 setResults([])
                 setFinished(false)
                 startTime.current = Date.now()
@@ -158,26 +178,29 @@ export default function Quiz() {
   if (!current) return null
 
   const isCorrect =
-    selected !== null &&
-    (current.type === 'true_false'
-      ? selected === current.answer
-      : selected === current.answer)
+    selectedAnswer !== null &&
+    selectedAnswer === current.answer
 
   const handleSelect = (value: number | boolean) => {
-    if (selected !== null) return
-    setSelected(value)
+    // Block if already answered
+    if (isAnswered) return
 
-    const correct =
-      current.type === 'true_false'
-        ? value === current.answer
-        : value === current.answer
+    setSelectedAnswer(value)
+    setIsAnswered(true)
 
+    const correct = value === current.answer
     recordQuizResult(current.id, correct)
     if (correct) addXP(10)
     setResults((prev) => [...prev, { quiz: current, correct }])
 
-    // Show explanation after short delay
-    setTimeout(() => setShowExplanation(true), 600)
+    // Show feedback overlay
+    setShowFeedback(correct ? 'correct' : 'wrong')
+  }
+
+  const handleFeedbackDone = () => {
+    setShowFeedback(null)
+    // Show explanation after feedback closes
+    setShowExplanation(true)
   }
 
   const handleNext = () => {
@@ -185,13 +208,15 @@ export default function Quiz() {
       // All correct bonus
       const allCorrect = results.every((r) => r.correct)
       if (allCorrect) addXP(20)
-      if (!quizSet) completeQuiz() // 오답 복습이 아닌 경우에만 완료 처리
+      if (!quizSet) completeQuiz()
       setFinished(true)
       return
     }
     setIndex((i) => i + 1)
-    setSelected(null)
+    setSelectedAnswer(null)
+    setIsAnswered(false)
     setShowExplanation(false)
+    setShowFeedback(null)
   }
 
   return (
@@ -240,12 +265,12 @@ export default function Quiz() {
             let style = 'bg-white border-gray-200'
             let badge = ''
 
-            if (selected !== null) {
+            if (isAnswered) {
               if (i === current.answer) {
-                style = 'bg-green-50 border-green-500'
+                style = 'bg-green-50 border-2 border-green-500'
                 badge = '✅'
-              } else if (i === selected && i !== current.answer) {
-                style = 'bg-red-50 border-red-500'
+              } else if (i === selectedAnswer && i !== current.answer) {
+                style = 'bg-red-50 border-2 border-red-500'
                 badge = '❌'
               } else {
                 style = 'bg-white border-gray-100 opacity-50'
@@ -255,10 +280,11 @@ export default function Quiz() {
             return (
               <motion.button
                 key={i}
-                whileTap={selected === null ? { scale: 0.98 } : undefined}
+                whileTap={!isAnswered ? { scale: 0.98 } : undefined}
                 onClick={() => handleSelect(i)}
-                disabled={selected !== null}
-                className={`w-full text-left px-4 py-3.5 rounded-xl border-2 text-sm transition-all ${style}`}
+                className={`w-full text-left px-4 py-3.5 rounded-xl border-2 text-sm transition-all ${style} ${
+                  isAnswered ? 'pointer-events-none' : ''
+                }`}
               >
                 <div className="flex items-center justify-between">
                   <span>{opt}</span>
@@ -279,11 +305,11 @@ export default function Quiz() {
                   ? 'bg-blue-50 border-blue-300 text-blue-600'
                   : 'bg-red-50 border-red-300 text-red-500'
 
-              if (selected !== null) {
+              if (isAnswered) {
                 if (value === current.answer) {
-                  style = 'bg-green-100 border-green-500 text-green-700'
-                } else if (value === selected && value !== current.answer) {
-                  style = 'bg-red-100 border-red-500 text-red-700'
+                  style = 'bg-green-100 border-2 border-green-500 text-green-700'
+                } else if (value === selectedAnswer && value !== current.answer) {
+                  style = 'bg-red-100 border-2 border-red-500 text-red-700'
                 } else {
                   style += ' opacity-40'
                 }
@@ -292,10 +318,11 @@ export default function Quiz() {
               return (
                 <motion.button
                   key={label}
-                  whileTap={selected === null ? { scale: 0.95 } : undefined}
+                  whileTap={!isAnswered ? { scale: 0.95 } : undefined}
                   onClick={() => handleSelect(value)}
-                  disabled={selected !== null}
-                  className={`flex-1 py-6 rounded-2xl border-2 text-3xl font-bold transition-all ${style}`}
+                  className={`flex-1 py-6 rounded-2xl border-2 text-3xl font-bold transition-all ${style} ${
+                    isAnswered ? 'pointer-events-none' : ''
+                  }`}
                 >
                   {label}
                 </motion.button>
@@ -309,20 +336,28 @@ export default function Quiz() {
       <AnimatePresence>
         {showExplanation && (
           <motion.div
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
+            exit={{ y: 300, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="mt-3 bg-white rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)] p-5"
+            className="mt-3 bg-white rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)] p-6"
           >
             {/* Feedback badge */}
             <div className="flex items-center gap-2 mb-2">
               {isCorrect ? (
                 <span className="text-sm font-semibold text-green-600">✅ 정답!</span>
               ) : (
-                <span className="text-sm font-semibold text-red-500">❌ 오답</span>
+                <div>
+                  <span className="text-sm font-semibold text-red-500">❌ 오답</span>
+                  <p className="text-sm text-green-600 font-medium mt-1">
+                    정답: {getCorrectAnswerText(current)}
+                  </p>
+                </div>
               )}
             </div>
+
+            {/* Divider */}
+            <div className="h-px bg-gray-100 my-3" />
 
             {/* Explanation */}
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -331,9 +366,12 @@ export default function Quiz() {
 
             {/* Related cards link */}
             {current.relatedCards.length > 0 && (
-              <p className="text-xs text-[#c9956a] mb-3">
-                📇 관련 카드: {current.relatedCards.join(', ')}
-              </p>
+              <button
+                onClick={() => navigate('/flashcards')}
+                className="w-full text-left text-sm text-[#c9956a] font-medium mb-4 flex items-center gap-1"
+              >
+                📚 관련 플래시카드 보기
+              </button>
             )}
 
             {/* Next button */}
@@ -350,6 +388,16 @@ export default function Quiz() {
 
       {/* Spacer when no explanation shown */}
       {!showExplanation && <div className="h-4" />}
+
+      {/* ── Feedback overlays ─────────────────────────────── */}
+      <AnimatePresence>
+        {showFeedback === 'correct' && (
+          <CorrectFeedback onDone={handleFeedbackDone} />
+        )}
+        {showFeedback === 'wrong' && (
+          <WrongFeedback onDone={handleFeedbackDone} />
+        )}
+      </AnimatePresence>
     </div>
   )
 }

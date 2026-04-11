@@ -1,124 +1,111 @@
-import { useEffect, useCallback, useRef } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useStudyStore } from '../stores/studyStore'
-import { quotes } from '../data/quotes'
 
-// ── Schedule times (hours in 24h format) ────────────────────
-const MORNING_HOUR = 8
-const EVENING_HOUR = 18
-const NIGHT_HOUR = 21
-
-function getRandomQuote() {
-  const q = quotes[Math.floor(Math.random() * quotes.length)]
-  return `${q.text} - ${q.author}`
+// ── PWA detection ─────────────────────────────────────────
+function isPWA(): boolean {
+  if (typeof window === 'undefined') return false
+  return (
+    window.matchMedia('(display-mode: standalone)').matches ||
+    (window.navigator as Navigator & { standalone?: boolean }).standalone === true
+  )
 }
 
-function todayStr(): string {
-  return new Date().toISOString().slice(0, 10)
+function isIOS(): boolean {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 }
 
+// ── Hook ──────────────────────────────────────────────────
 export function useNotification() {
-  const timers = useRef<ReturnType<typeof setTimeout>[]>([])
+  const [permission, setPermission] = useState<NotificationPermission>(
+    typeof Notification !== 'undefined' ? Notification.permission : 'default',
+  )
+  const [showInstallBanner, setShowInstallBanner] = useState(false)
+  const [isPwaMode] = useState(isPWA)
+  const [isIOSDevice] = useState(isIOS)
+
   const lastStudyDate = useStudyStore((s) => s.lastStudyDate)
   const streak = useStudyStore((s) => s.streak)
+  const todayCompleted = useStudyStore((s) => s.todayCompleted)
 
-  // ── Request permission on first load ────────────────────
+  // ── Check if install banner should show ─────────────────
   useEffect(() => {
-    if ('Notification' in window && Notification.permission === 'default') {
-      Notification.requestPermission()
+    if (isPwaMode) return
+    const dismissed = localStorage.getItem('jiji-install-banner-dismissed')
+    if (!dismissed) {
+      setShowInstallBanner(true)
     }
+  }, [isPwaMode])
+
+  const dismissInstallBanner = useCallback(() => {
+    setShowInstallBanner(false)
+    localStorage.setItem('jiji-install-banner-dismissed', 'true')
   }, [])
 
-  // ── Send a notification ─────────────────────────────────
-  const notify = useCallback((title: string, body: string) => {
-    if (!('Notification' in window) || Notification.permission !== 'granted') return
-
-    // Use SW notification if available for better mobile support
-    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-      navigator.serviceWorker.ready.then((reg) => {
-        reg.showNotification(title, {
-          body,
-          icon: '/mascot/greeting.png',
-          badge: '/icons/icon-192.png',
-          tag: 'jiji-reminder',
-        } as NotificationOptions)
-      })
-    } else {
-      new Notification(title, {
-        body,
-        icon: '/mascot/greeting.png',
-      })
+  // ── Request permission (PWA mode only) ──────────────────
+  const requestPermission = useCallback(async () => {
+    if (!('Notification' in window)) return 'denied' as const
+    const result = await Notification.requestPermission()
+    setPermission(result)
+    if (result === 'granted') {
+      sendStudyStateToSW()
     }
+    return result
   }, [])
 
-  // ── Schedule daily notifications ────────────────────────
+  // ── Auto-request on PWA first load ──────────────────────
   useEffect(() => {
-    // Clear previous timers
-    timers.current.forEach(clearTimeout)
-    timers.current = []
+    if (!isPwaMode) return
+    if (!('Notification' in window)) return
+    if (Notification.permission === 'default') {
+      // Small delay so app feels loaded first
+      const timer = setTimeout(() => {
+        requestPermission()
+      }, 2000)
+      return () => clearTimeout(timer)
+    }
+  }, [isPwaMode, requestPermission])
 
-    if (!('Notification' in window) || Notification.permission !== 'granted') return
+  // ── Send study state to SW for notification customization
+  const sendStudyStateToSW = useCallback(() => {
+    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) return
 
-    const now = new Date()
-    const today = todayStr()
-    const studiedToday = lastStudyDate === today
-
-    function msUntilHour(hour: number): number {
-      const target = new Date()
-      target.setHours(hour, 0, 0, 0)
-      const diff = target.getTime() - now.getTime()
-      return diff > 0 ? diff : -1 // -1 = already passed today
+    const today = new Date().toISOString().slice(0, 10)
+    const state = {
+      studiedToday: lastStudyDate === today,
+      streak,
+      allDone: todayCompleted.concept && todayCompleted.flash && todayCompleted.quiz,
     }
 
-    // Morning 8:00
-    const msMorning = msUntilHour(MORNING_HOUR)
-    if (msMorning > 0) {
-      timers.current.push(
-        setTimeout(() => {
-          notify('좋은 아침!', '오늘의 지지 학습이 준비됐어 📚')
-        }, msMorning),
-      )
-    }
+    navigator.serviceWorker.controller.postMessage({
+      type: 'SCHEDULE_NOTIFICATIONS',
+      state,
+    })
+  }, [lastStudyDate, streak, todayCompleted])
 
-    // Evening 18:00 (if not studied)
-    const msEvening = msUntilHour(EVENING_HOUR)
-    if (msEvening > 0) {
-      timers.current.push(
-        setTimeout(() => {
-          const current = useStudyStore.getState()
-          if (current.lastStudyDate !== todayStr()) {
-            notify('오늘의 명언', `${getRandomQuote()}\n아직 오늘 학습을 안 했어요!`)
-          }
-        }, msEvening),
-      )
-    }
+  // ── Re-schedule when study state changes ────────────────
+  useEffect(() => {
+    if (permission !== 'granted') return
+    sendStudyStateToSW()
+  }, [permission, sendStudyStateToSW])
 
-    // Night 21:00 (if not studied)
-    const msNight = msUntilHour(NIGHT_HOUR)
-    if (msNight > 0) {
-      timers.current.push(
-        setTimeout(() => {
-          const current = useStudyStore.getState()
-          if (current.lastStudyDate !== todayStr()) {
-            notify('지지가 졸고 있어요 💤', '5분만 투자해볼까?')
-          }
-        }, msNight),
-      )
-    }
+  // ── Also schedule when SW becomes ready ─────────────────
+  useEffect(() => {
+    if (permission !== 'granted') return
+    if (!('serviceWorker' in navigator)) return
 
-    // Streak celebration (check immediately)
-    if (studiedToday) {
-      if (streak === 3) {
-        notify('🔥 3일 연속 학습!', '과탑이 코앞이야!')
-      } else if (streak === 7) {
-        notify('🏆 일주일 연속!', '지지가 감동받았어!')
-      }
-    }
+    navigator.serviceWorker.ready.then(() => {
+      // Wait a beat for controller to be available
+      setTimeout(sendStudyStateToSW, 500)
+    })
+  }, [permission, sendStudyStateToSW])
 
-    return () => {
-      timers.current.forEach(clearTimeout)
-      timers.current = []
-    }
-  }, [lastStudyDate, streak, notify])
-
-  return { notify }
+  return {
+    permission,
+    isPwaMode,
+    isIOSDevice,
+    showInstallBanner,
+    dismissInstallBanner,
+    requestPermission,
+  }
 }
