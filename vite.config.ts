@@ -12,7 +12,7 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'sw.ts',
       registerType: 'autoUpdate',
-      includeAssets: ['mascot/*.png', 'icons/*.png', 'data/**/*.json'],
+      includeAssets: ['mascot/*.png', 'icons/*.png', 'icons/apple-touch-icon.png', 'data/**/*.json'],
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
@@ -35,6 +35,12 @@ export default defineConfig({
           {
             src: 'icons/icon-512.png',
             sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+          {
+            src: 'icons/apple-icon-1024.png',
+            sizes: '1024x1024',
             type: 'image/png',
             purpose: 'any maskable',
           },

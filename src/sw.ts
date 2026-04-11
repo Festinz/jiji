@@ -98,8 +98,8 @@ function scheduleNotifications() {
 
       self.registration.showNotification(title, {
         body,
-        icon: '/mascot/greeting.png',
-        badge: '/icons/icon-192.png',
+        icon: '/icons/jiji-notif-192.png',
+        badge: '/icons/apple-touch-icon.png',
         tag: n.tag,
         data: { url: '/' },
       })

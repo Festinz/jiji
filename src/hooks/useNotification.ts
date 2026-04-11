@@ -53,18 +53,26 @@ export function useNotification() {
     return result
   }, [])
 
-  // ── Auto-request on PWA first load ──────────────────────
+  // ── Show notification banner for PWA users who haven't decided yet
+  const [showNotifBanner, setShowNotifBanner] = useState(false)
+
   useEffect(() => {
     if (!isPwaMode) return
     if (!('Notification' in window)) return
-    if (Notification.permission === 'default') {
-      // Small delay so app feels loaded first
-      const timer = setTimeout(() => {
-        requestPermission()
-      }, 2000)
-      return () => clearTimeout(timer)
-    }
-  }, [isPwaMode, requestPermission])
+    if (Notification.permission !== 'default') return
+    const timer = setTimeout(() => setShowNotifBanner(true), 1500)
+    return () => clearTimeout(timer)
+  }, [isPwaMode])
+
+  const dismissNotifBanner = useCallback(() => {
+    setShowNotifBanner(false)
+  }, [])
+
+  const handleNotifBannerAllow = useCallback(async () => {
+    const result = await requestPermission()
+    setShowNotifBanner(false)
+    return result
+  }, [requestPermission])
 
   // ── Send study state to SW for notification customization
   const sendStudyStateToSW = useCallback(() => {
@@ -106,6 +114,9 @@ export function useNotification() {
     isIOSDevice,
     showInstallBanner,
     dismissInstallBanner,
+    showNotifBanner,
+    dismissNotifBanner,
+    handleNotifBannerAllow,
     requestPermission,
   }
 }
