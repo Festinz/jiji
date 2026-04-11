@@ -33,8 +33,25 @@ export default function About() {
     window.location.reload()
   }
 
+  const [notifFeedback, setNotifFeedback] = useState<string | null>(null)
+
   const handleRequestNotification = async () => {
-    await requestPermission()
+    if (!('Notification' in window)) {
+      setNotifFeedback('이 브라우저에서는 알림을 지원하지 않아요. 홈 화면에 추가한 뒤 다시 시도해주세요!')
+      return
+    }
+    try {
+      const result = await requestPermission()
+      if (result === 'granted') {
+        setNotifFeedback('알림이 설정되었어요! 🎉')
+      } else if (result === 'denied') {
+        setNotifFeedback('알림이 차단되었어요. 기기 설정 → 지지 → 알림에서 허용해주세요.')
+      } else {
+        setNotifFeedback('알림 권한 요청이 닫혔어요. 다시 시도해주세요.')
+      }
+    } catch {
+      setNotifFeedback('알림 설정 중 오류가 발생했어요. 홈 화면에 추가한 뒤 다시 시도해주세요!')
+    }
   }
 
   return (
@@ -154,6 +171,11 @@ export default function About() {
               >
                 🔔 알림 설정하기
               </button>
+              {notifFeedback && (
+                <p className="text-[11px] text-gray-600 mt-2 leading-relaxed bg-white rounded-lg p-2">
+                  {notifFeedback}
+                </p>
+              )}
             </div>
           </div>
         )}
