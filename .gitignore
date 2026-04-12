@@ -25,3 +25,4 @@ dist-ssr
 
 # PDF 원본 (저작권)
 data/raw/*.pdf
+.vercel

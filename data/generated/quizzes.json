@@ -2471,5 +2471,617 @@
     "relatedCards": [],
     "chunkId": "exam-prediction",
     "isExamPrediction": true
+  },
+  {
+    "id": "qz-157",
+    "type": "multiple_choice",
+    "question": "ROM 측정 시 사용하는 각도계의 3가지 구성 요소가 아닌 것은?",
+    "options": [
+      "축(Axis)",
+      "고정팔(Stationary arm)",
+      "이동팔(Moving arm)",
+      "압력계(Pressure gauge)"
+    ],
+    "answer": 3,
+    "explanation": "각도계(Goniometer)는 축(Axis), 고정팔(Stationary arm), 이동팔(Moving arm)의 3요소로 구성됩니다. 압력계는 각도계의 구성요소가 아닙니다.",
+    "difficulty": "easy",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs012"
+  },
+  {
+    "id": "qz-158",
+    "type": "multiple_choice",
+    "question": "AROM과 PROM의 관계로 정상인 것은?",
+    "options": [
+      "AROM > PROM",
+      "AROM = PROM 또는 PROM > AROM",
+      "AROM < PROM은 구축을 의미",
+      "PROM은 항상 0이다"
+    ],
+    "answer": 1,
+    "explanation": "정상적으로 PROM >= AROM입니다. PROM이 AROM보다 작으면 관절 구축을 의심해야 합니다.",
+    "difficulty": "medium",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs012"
+  },
+  {
+    "id": "qz-159",
+    "type": "multiple_choice",
+    "question": "최종감(End-feel)에서 팔꿈치 폄 시 느껴지는 정상 최종감은?",
+    "options": [
+      "연부조직 근접",
+      "조직 신장",
+      "뼈 대 뼈",
+      "빈 느낌"
+    ],
+    "answer": 2,
+    "explanation": "팔꿈치 폄 시에는 주두돌기가 주두와에 닿으면서 딱딱한 '뼈 대 뼈' 최종감이 느껴집니다.",
+    "difficulty": "medium",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs012"
+  },
+  {
+    "id": "qz-160",
+    "type": "multiple_choice",
+    "question": "MMT에서 Grade 2(Poor)와 Grade 3(Fair)를 구분하는 핵심 기준은?",
+    "options": [
+      "저항의 크기",
+      "관절 가동범위",
+      "중력의 유무",
+      "통증의 정도"
+    ],
+    "answer": 2,
+    "explanation": "Grade 2는 중력 제거 자세에서 전 범위 운동, Grade 3는 중력에 대항하여 전 범위 운동입니다. 핵심 차이는 중력의 유무입니다.",
+    "difficulty": "medium",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs013"
+  },
+  {
+    "id": "qz-161",
+    "type": "multiple_choice",
+    "question": "Triceps brachii(위팔세갈래근)의 주된 동작은?",
+    "options": [
+      "팔꿈치 굴곡",
+      "팔꿈치 신전",
+      "어깨 외전",
+      "전완 회내"
+    ],
+    "answer": 1,
+    "explanation": "Triceps brachii(삼두근/위팔세갈래근)의 주된 동작은 팔꿈치 신전(폄)입니다. 시험에 영어명으로 자주 출제됩니다.",
+    "difficulty": "easy",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs013"
+  },
+  {
+    "id": "qz-162",
+    "type": "multiple_choice",
+    "question": "MMT 측정 원칙으로 적절하지 않은 것은?",
+    "options": [
+      "건측 먼저 검사한다",
+      "검사 전 시범을 보여준다",
+      "환측을 먼저 검사하여 기준을 잡는다",
+      "안정화(stabilization)를 통해 보상동작을 방지한다"
+    ],
+    "answer": 2,
+    "explanation": "MMT는 건측을 먼저 검사하여 기준을 잡고, 환측과 비교합니다. 환측 먼저 검사하는 것은 잘못된 원칙입니다.",
+    "difficulty": "easy",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs013"
+  },
+  {
+    "id": "qz-163",
+    "type": "multiple_choice",
+    "question": "Brunnstrom 회복 단계에서 경직이 최고조에 달하는 단계는?",
+    "options": [
+      "1단계",
+      "2단계",
+      "3단계",
+      "4단계"
+    ],
+    "answer": 2,
+    "explanation": "3단계에서 경직이 최고조에 달하며, 공동운동 패턴이 수의적으로 가능해집니다. 4단계부터 경직이 감소하기 시작합니다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs014"
+  },
+  {
+    "id": "qz-164",
+    "type": "multiple_choice",
+    "question": "Brunnstrom 4단계에서 나타나는 동작이 아닌 것은?",
+    "options": [
+      "손을 허리 뒤로 가져가기",
+      "팔꿈치 90도 굴곡에서 전완 회내/회외",
+      "어깨 굴곡 90도에서 팔꿈치 신전",
+      "완전한 분리운동으로 개별 관절 독립 조절"
+    ],
+    "answer": 3,
+    "explanation": "완전한 분리운동(개별 관절 독립 조절)은 5단계에서 가능합니다. 4단계는 공동운동에서 벗어나기 시작하는 단계입니다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs014"
+  },
+  {
+    "id": "qz-165",
+    "type": "multiple_choice",
+    "question": "PNF 상지 D1 굴곡 패턴의 기억법으로 적절한 것은?",
+    "options": [
+      "백핸드 동작",
+      "칼 뽑는 동작",
+      "축구공 차기",
+      "칼로 베는 동작"
+    ],
+    "answer": 1,
+    "explanation": "D1 굴곡은 어깨 굴곡+내전+외회전, 팔꿈치 신전 패턴으로 '칼 뽑는 동작'으로 기억합니다. 백핸드 동작은 D2 굴곡입니다.",
+    "difficulty": "easy",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs015"
+  },
+  {
+    "id": "qz-166",
+    "type": "multiple_choice",
+    "question": "PNF에서 방산(Irradiation)에 대한 설명으로 올바른 것은?",
+    "options": [
+      "약한 근육이 강한 근육을 촉진하는 현상",
+      "강한 근육의 수축이 약한 근육으로 파급되는 현상",
+      "근육의 수축 속도가 점점 빨라지는 현상",
+      "등척성 수축 후 이완되는 현상"
+    ],
+    "answer": 1,
+    "explanation": "방산(Irradiation/overflow)은 강한 근육의 수축이 약한 근육으로 파급되는 현상입니다. 임상에서 약한 근육 옆의 강한 근육에 저항을 주어 활용합니다.",
+    "difficulty": "medium",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs015"
+  },
+  {
+    "id": "qz-167",
+    "type": "multiple_choice",
+    "question": "NDT에서 경직이 있는 환자의 긴장도를 낮추기 위한 방법은?",
+    "options": [
+      "빠른 움직임과 간헐적 압박",
+      "느린 움직임과 체중부하",
+      "빠른 신장과 진동",
+      "빠른 솔질과 가벼운 접촉"
+    ],
+    "answer": 1,
+    "explanation": "경직 시에는 느린 움직임, 체중부하, 회전 패턴으로 긴장도를 감소시킵니다. 빠른 움직임과 압박은 이완(flaccidity) 시 긴장도를 증가시키는 방법입니다.",
+    "difficulty": "medium",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs016"
+  },
+  {
+    "id": "qz-168",
+    "type": "multiple_choice",
+    "question": "NDT 치료 초기에 사용하는 핵심조절점은?",
+    "options": [
+      "손과 발(원위부)",
+      "머리, 어깨뼈, 골반(근위부)",
+      "팔꿈치와 무릎(중간부)",
+      "손가락과 발가락(말단부)"
+    ],
+    "answer": 1,
+    "explanation": "치료 초기에는 근위부 조절점(머리, 어깨뼈, 골반)을 사용하여 자세 긴장도를 조절합니다. 회복이 진행되면 원위부(손, 발)로 전환합니다.",
+    "difficulty": "easy",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs016"
+  },
+  {
+    "id": "qz-169",
+    "type": "multiple_choice",
+    "question": "Rood 접근법에서 억제 기법에 해당하는 것은?",
+    "options": [
+      "빠른 솔질(Fast brushing)",
+      "빠른 냉자극(Quick icing)",
+      "느린 스트로킹(Slow stroking)",
+      "진동(Vibration)"
+    ],
+    "answer": 2,
+    "explanation": "느린 스트로킹은 억제 기법(근활동 감소)입니다. 빠른 솔질, 빠른 냉자극, 진동은 모두 촉진 기법(근활동 증가)입니다.",
+    "difficulty": "medium",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs017"
+  },
+  {
+    "id": "qz-170",
+    "type": "multiple_choice",
+    "question": "Rood의 운동 발달 단계 순서로 올바른 것은?",
+    "options": [
+      "안정성→가동성→기술→가동성위안정성",
+      "가동성→안정성→가동성위안정성→기술",
+      "기술→안정성→가동성→가동성위안정성",
+      "가동성→가동성위안정성→안정성→기술"
+    ],
+    "answer": 1,
+    "explanation": "Rood의 4단계: 가동성(Mobility)→안정성(Stability)→가동성 위의 안정성(Mobility on Stability)→기술(Skill) 순서입니다.",
+    "difficulty": "medium",
+    "category": "감각운동 치료접근",
+    "relatedCards": [],
+    "chunkId": "ch-cs017"
+  },
+  {
+    "id": "qz-171",
+    "type": "multiple_choice",
+    "question": "C6 척수손상에서 잡기가 가능한 핵심 원리는?",
+    "options": [
+      "이두근의 강한 수축",
+      "삼두근에 의한 프레스업",
+      "건측효과(Tenodesis)",
+      "손 내재근의 보존"
+    ],
+    "answer": 2,
+    "explanation": "C6 손상에서는 손목 신전근이 보존되어 건측효과(Tenodesis)로 잡기가 가능합니다. 손목 폄→손가락 자동 굽힘→잡기!",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "relatedCards": [],
+    "chunkId": "ch-cs018"
+  },
+  {
+    "id": "qz-172",
+    "type": "multiple_choice",
+    "question": "사지마비 중 가장 독립적인 기능을 보이는 척수손상 수준은?",
+    "options": [
+      "C5",
+      "C6",
+      "C7",
+      "C4"
+    ],
+    "answer": 2,
+    "explanation": "C7 손상은 삼두근(Triceps)이 보존되어 팔꿈치 폄과 프레스업이 가능합니다. 수동 휠체어 완전 독립, ADL 대부분 독립적으로 사지마비 중 가장 독립적입니다.",
+    "difficulty": "medium",
+    "category": "척수손상의 중재",
+    "relatedCards": [],
+    "chunkId": "ch-cs018"
+  },
+  {
+    "id": "qz-173",
+    "type": "multiple_choice",
+    "question": "경직(Spasticity)의 특성으로 올바른 것은?",
+    "options": [
+      "속도와 무관한 근긴장도 증가",
+      "속도 의존적 근긴장도 증가",
+      "하위운동신경원 손상 시 나타남",
+      "근육 조직의 영구적 단축"
+    ],
+    "answer": 1,
+    "explanation": "경직은 상위운동신경원 손상 시 나타나는 속도 의존적 근긴장도 증가입니다. 속도와 무관한 것은 강직(Rigidity), 영구적 단축은 구축(Contracture)입니다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs019"
+  },
+  {
+    "id": "qz-174",
+    "type": "multiple_choice",
+    "question": "Modified Ashworth Scale에서 다른 등급들과 구별되는 특수 등급은?",
+    "options": [
+      "0등급",
+      "1+등급",
+      "3등급",
+      "5등급"
+    ],
+    "answer": 1,
+    "explanation": "MAS는 0, 1, 1+, 2, 3, 4로 구성되며, 1+등급이 있는 것이 다른 등급체계와 구별되는 특징입니다. 5등급은 MAS에 없습니다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs019"
+  },
+  {
+    "id": "qz-175",
+    "type": "multiple_choice",
+    "question": "정상 보행주기에서 입각기(Stance phase)가 차지하는 비율은?",
+    "options": [
+      "40%",
+      "50%",
+      "60%",
+      "70%"
+    ],
+    "answer": 2,
+    "explanation": "입각기(발이 바닥에 닿아있는 시기)는 전체 보행주기의 60%, 유각기(발이 공중에 있는 시기)는 40%를 차지합니다.",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs020"
+  },
+  {
+    "id": "qz-176",
+    "type": "multiple_choice",
+    "question": "뇌졸중에서 가장 흔한 비정상 보행 패턴은?",
+    "options": [
+      "가위 보행",
+      "분회전 보행",
+      "추진 보행",
+      "실조성 보행"
+    ],
+    "answer": 1,
+    "explanation": "분회전 보행(Circumduction gait)이 뇌졸중에서 가장 흔합니다. 하지 경직(무릎 펴짐+발목 저측굴곡)으로 다리를 바깥으로 돌려 전진합니다.",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs020"
+  },
+  {
+    "id": "qz-177",
+    "type": "multiple_choice",
+    "question": "지팡이 사용 시 올바른 방법은?",
+    "options": [
+      "환측 손에 사용, 건측 발과 동시에 내딛기",
+      "건측 손에 사용, 환측 발과 동시에 내딛기",
+      "환측 손에 사용, 환측 발과 동시에 내딛기",
+      "건측 손에 사용, 건측 발과 동시에 내딛기"
+    ],
+    "answer": 1,
+    "explanation": "지팡이는 건측 손에 사용하며, 환측 발과 동시에 내딛습니다. 이렇게 하면 환측 다리에 가해지는 체중을 분산시킬 수 있습니다.",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs020"
+  },
+  {
+    "id": "qz-178",
+    "type": "multiple_choice",
+    "question": "정상인이 균형 유지에 가장 많이 의존하는 감각 시스템은?",
+    "options": [
+      "시각",
+      "전정감각",
+      "체성감각",
+      "청각"
+    ],
+    "answer": 2,
+    "explanation": "정상인은 체성감각(고유수용감각+촉각)에 약 70%를 의존합니다. 시각과 전정감각이 나머지를 보조합니다.",
+    "difficulty": "easy",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs021"
+  },
+  {
+    "id": "qz-179",
+    "type": "multiple_choice",
+    "question": "균형 등급에서 Good 등급의 기준은?",
+    "options": [
+      "모든 자세에서 안정, 외부 힘에도 유지",
+      "동적 균형에서 바닥 물건 집기 가능",
+      "동적 균형에서 제한적 움직임만 가능",
+      "정적 균형만 가능"
+    ],
+    "answer": 1,
+    "explanation": "Good 등급은 동적 균형에서 바닥의 물건 집기가 가능한 수준입니다. Normal은 외부 힘에도 유지, Fair는 제한적 움직임, Poor는 정적만 가능입니다.",
+    "difficulty": "medium",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs021"
+  },
+  {
+    "id": "qz-180",
+    "type": "multiple_choice",
+    "question": "BBS(Berg Balance Scale)에서 낙상 위험이 증가하는 기준 점수는?",
+    "options": [
+      "56점 이하",
+      "50점 이하",
+      "45점 이하",
+      "40점 이하"
+    ],
+    "answer": 2,
+    "explanation": "BBS 56점 만점에서 45점 이하면 낙상 위험이 증가합니다. 0~20점: 휠체어 수준, 21~40점: 보조도구 보행, 41~56점: 독립 보행.",
+    "difficulty": "easy",
+    "category": "운동재활 평가",
+    "relatedCards": [],
+    "chunkId": "ch-cs021"
+  },
+  {
+    "id": "qz-181",
+    "type": "multiple_choice",
+    "question": "DeLorme 방식의 점진적 저항 운동 순서는?",
+    "options": [
+      "100%→75%→50%",
+      "50%→75%→100%",
+      "75%→100%→50%",
+      "50%→100%→75%"
+    ],
+    "answer": 1,
+    "explanation": "DeLorme 방식은 10RM의 50%→75%→100% 순서로 점진적으로 부하를 증가시킵니다. Oxford 방식은 반대로 100%→75%→50%입니다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "relatedCards": [],
+    "chunkId": "ch-cs022"
+  },
+  {
+    "id": "qz-182",
+    "type": "multiple_choice",
+    "question": "근지구력 향상을 위한 적절한 RM 처방은?",
+    "options": [
+      "6RM 이하",
+      "8~12RM",
+      "15RM 이상",
+      "1RM"
+    ],
+    "answer": 2,
+    "explanation": "근지구력은 15RM 이상의 낮은 강도, 많은 반복으로 훈련합니다. 근력은 6RM 이하, 근비대는 8~12RM입니다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "relatedCards": [],
+    "chunkId": "ch-cs022"
+  },
+  {
+    "id": "qz-183",
+    "type": "multiple_choice",
+    "question": "원심성(Eccentric) 수축의 특성은?",
+    "options": [
+      "관절 움직임 없이 힘 발생",
+      "근육이 짧아지며 수축",
+      "근육이 길어지며 수축, 가장 큰 힘 발생",
+      "일정 속도로 전 범위 최대 저항"
+    ],
+    "answer": 2,
+    "explanation": "원심성 수축은 근육이 길어지면서 수축하며, 3가지 수축 유형 중 가장 큰 힘을 발생시킵니다. 다만 근손상에 주의해야 합니다.",
+    "difficulty": "medium",
+    "category": "운동치료중재의 개요",
+    "relatedCards": [],
+    "chunkId": "ch-cs022"
+  },
+  {
+    "id": "qz-184",
+    "type": "multiple_choice",
+    "question": "편마비 환자가 상의를 입을 때 올바른 순서는?",
+    "options": [
+      "건측 팔 먼저 → 머리 → 환측 팔",
+      "환측 팔 먼저 → 머리 → 건측 팔",
+      "머리 먼저 → 환측 팔 → 건측 팔",
+      "건측 팔과 환측 팔 동시에"
+    ],
+    "answer": 1,
+    "explanation": "입을 때는 환측 먼저(아픈 쪽 먼저 입기), 벗을 때는 건측 먼저(괜찮은 쪽 먼저 벗기)가 원칙입니다.",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs023"
+  },
+  {
+    "id": "qz-185",
+    "type": "multiple_choice",
+    "question": "K-MBI(한국판 수정바텔지수)의 만점은?",
+    "options": [
+      "56점",
+      "80점",
+      "100점",
+      "120점"
+    ],
+    "answer": 2,
+    "explanation": "K-MBI는 10개 항목, 총 100점 만점입니다. 91~100점이 독립 수준, 0~24점이 완전 의존 수준입니다.",
+    "difficulty": "easy",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs023"
+  },
+  {
+    "id": "qz-186",
+    "type": "multiple_choice",
+    "question": "뇌졸중 후 어깨 아탈구 시 슬링(Arm sling) 사용 원칙은?",
+    "options": [
+      "경직기에 사용하여 굴곡 패턴 강화",
+      "이완기에 사용하여 과도한 견인 방지",
+      "양쪽 모두 항상 사용",
+      "슬링 대신 환측 팔을 자주 당기기"
+    ],
+    "answer": 1,
+    "explanation": "이완기에 슬링을 사용하여 과도한 견인을 방지합니다. 경직기에는 제거(굴곡패턴 강화 위험), 환측 팔 당기기는 절대 금지입니다.",
+    "difficulty": "medium",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs024"
+  },
+  {
+    "id": "qz-187",
+    "type": "multiple_choice",
+    "question": "회전근개(Rotator Cuff)를 구성하는 근육의 약자는?",
+    "options": [
+      "RICE",
+      "SITS",
+      "FAST",
+      "SOAP"
+    ],
+    "answer": 1,
+    "explanation": "SITS: Supraspinatus(극상근), Infraspinatus(극하근), Teres minor(소원근), Subscapularis(견갑하근)의 약자입니다.",
+    "difficulty": "easy",
+    "category": "뇌졸중 운동치료",
+    "relatedCards": [],
+    "chunkId": "ch-cs024"
+  },
+  {
+    "id": "qz-188",
+    "type": "multiple_choice",
+    "question": "Tenodesis(건측효과)에 대한 설명으로 올바른 것은?",
+    "options": [
+      "손목 굽힘 시 손가락이 자동으로 굽혀짐",
+      "손목 폄 시 손가락이 자동으로 굽혀짐",
+      "손목과 손가락이 동시에 펴짐",
+      "손가락만 독립적으로 움직임"
+    ],
+    "answer": 1,
+    "explanation": "Tenodesis: 손목 폄→손가락 자동 굽힘(잡기), 손목 굽힘→손가락 자동 폄(놓기). C6 척수손상의 핵심 기능입니다.",
+    "difficulty": "medium",
+    "category": "운동재활 기초",
+    "relatedCards": [],
+    "chunkId": "ch-cs025"
+  },
+  {
+    "id": "qz-189",
+    "type": "multiple_choice",
+    "question": "자율신경반사이상(AD) 발생 시 가장 먼저 해야 할 처치는?",
+    "options": [
+      "즉시 눕히기",
+      "즉시 앉히기",
+      "차가운 물 마시기",
+      "운동 시작하기"
+    ],
+    "answer": 1,
+    "explanation": "자율신경반사이상 시 즉시 앉혀서 혈압을 낮춰야 합니다. 절대 눕히면 안 됩니다(혈압 더 상승). 그 후 꽉 끼는 것 풀기→원인 찾기 순서입니다.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "relatedCards": [],
+    "chunkId": "ch-cs026"
+  },
+  {
+    "id": "qz-190",
+    "type": "multiple_choice",
+    "question": "자율신경반사이상의 가장 흔한 원인은?",
+    "options": [
+      "욕창",
+      "꽉 끼는 옷",
+      "방광 팽만",
+      "요로감염"
+    ],
+    "answer": 2,
+    "explanation": "자율신경반사이상의 가장 흔한 원인은 방광 팽만(80%)입니다. 그 다음이 변비/분변매복입니다.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "relatedCards": [],
+    "chunkId": "ch-cs026"
+  },
+  {
+    "id": "qz-191",
+    "type": "multiple_choice",
+    "question": "욕창 예방을 위한 체위 변경 주기는?",
+    "options": [
+      "30분마다",
+      "1시간마다",
+      "2시간마다",
+      "4시간마다"
+    ],
+    "answer": 2,
+    "explanation": "척수손상 환자의 욕창 예방을 위해 2시간마다 체위 변경이 기본 원칙입니다. 또한 15분마다 15초간 프레스업(엉덩이 들기)을 합니다.",
+    "difficulty": "easy",
+    "category": "척수손상의 중재",
+    "relatedCards": [],
+    "chunkId": "ch-cs026"
+  },
+  {
+    "id": "qz-192",
+    "type": "multiple_choice",
+    "question": "폐쇄사슬(CKC) 운동의 예시로 올바른 것은?",
+    "options": [
+      "앉아서 무릎 펴기",
+      "덤벨 들기",
+      "스쿼트",
+      "레그컬"
+    ],
+    "answer": 2,
+    "explanation": "폐쇄사슬(CKC)은 원위부가 고정된 운동입니다. 스쿼트, 벽 밀기, 프레스업이 해당합니다. 앉아서 무릎 펴기, 덤벨 들기, 레그컬은 개방사슬(OKC)입니다.",
+    "difficulty": "easy",
+    "category": "운동치료중재의 개요",
+    "relatedCards": [],
+    "chunkId": "ch-cs022"
   }
 ]
